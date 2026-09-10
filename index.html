@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tomas Lebedevas</title>
+<meta name="description" id="meta-desc" content="Tomas Lebedevas — information systems analyst in Vilnius, Lithuania. IT audit and compliance, writing, photography, chess, endurance and strength sport.">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Tomas Lebedevas">
+<meta property="og:description" content="Information systems analyst in Vilnius. IT audit and compliance, writing, photography, chess, sport.">
+<meta property="og:image" content="img/tomas-lebedevas-800.jpg">
+<meta name="theme-color" content="#293C4D">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Tomas Lebedevas",
+  "jobTitle": "Information Systems Analyst",
+  "url": "https://tomaslebedevas.com/",
+  "image": "https://tomaslebedevas.com/img/tomas-lebedevas-800.jpg",
+  "email": "tomas.lebedevas@icloud.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Vilnius", "addressCountry": "LT" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Vilnius University" },
+  "knowsAbout": ["IT audit", "Information security compliance", "eIDAS", "Health information systems", "Photography", "Chess"],
+  "sameAs": [
+    "https://www.linkedin.com/in/tomaslebedevas",
+    "https://github.com/tomlebedev-cloud",
+    "https://tomlebedev-cloud.github.io/",
+    "https://www.instagram.com/tomas.lebedevas.photo/",
+    "https://www.instagram.com/tom.lebedev15/"
+  ]
+}
+</script>
+<style>
+:root{
+  --slate:#293C4D;
+  --teal:#0F7A7A;
+  --ink:#1E2830;
+  --muted:#5C6874;
+  --dim:#8C9AA6;
+  --rule:#E1E7EA;
+  --bg:#FBFCFC;
+  --card:#FFFFFF;
+  --sans:"IBM Plex Sans","Segoe UI",Arial,sans-serif;
+  --serif:"IBM Plex Serif",Georgia,serif;
+  --mono:"IBM Plex Mono",Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --slate:#DCE5EC; --teal:#4FBDBD; --ink:#E6ECF1; --muted:#A6B4C0; --dim:#7E8D9A;
+    --rule:#2A3540; --bg:#161D24; --card:#1D262E;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:var(--serif); font-size:17px; line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%}
+a{color:var(--teal)}
+.wrap{max-width:840px;margin:0 auto;padding:0 24px}
+
+/* ---------- top bar ---------- */
+.topbar{
+  position:sticky; top:0; z-index:20;
+  background:var(--bg);
+  border-bottom:1px solid var(--rule);
+}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:52px}
+.brand{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.langs{display:flex;gap:2px}
+.langs button{
+  font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase;
+  background:none; border:0; padding:6px 8px; border-radius:5px;
+  color:var(--dim); cursor:pointer;
+}
+.langs button:hover{color:var(--ink);background:var(--rule)}
+.langs button[aria-current="true"]{color:#fff;background:var(--teal)}
+
+/* ---------- hero ---------- */
+.hero{padding:56px 0 40px;display:grid;grid-template-columns:150px 1fr;gap:32px;align-items:start}
+.portrait{
+  width:150px;height:150px;border-radius:50%;object-fit:cover;
+  border:3px solid var(--card); box-shadow:0 2px 20px rgba(41,60,77,.16);
+}
+h1{
+  font-family:var(--sans); font-weight:500; font-size:38px; line-height:1.05;
+  letter-spacing:.01em; margin:0 0 10px; color:var(--slate);
+}
+.role{
+  font-family:var(--mono); font-size:12px; letter-spacing:.13em; text-transform:uppercase;
+  color:var(--teal); margin:0 0 4px;
+}
+.place{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--dim);margin:0 0 18px}
+.lede{margin:0;font-size:17.5px;color:var(--ink)}
+
+/* ---------- sections ---------- */
+section{padding:34px 0;border-top:1px solid var(--rule)}
+h2{
+  font-family:var(--sans); font-size:12px; font-weight:600;
+  letter-spacing:.19em; text-transform:uppercase; color:var(--teal);
+  margin:0 0 18px; display:flex; align-items:center; gap:14px;
+}
+h2::after{content:"";flex:1;height:1px;background:var(--rule)}
+.lead{margin:0 0 22px;color:var(--ink)}
+.lead:last-child{margin-bottom:0}
+
+/* ---------- work ---------- */
+.job{margin-bottom:26px}
+.job:last-of-type{margin-bottom:0}
+.job-top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.job h3{font-family:var(--sans);font-size:17px;font-weight:600;margin:0;color:var(--slate)}
+.when{font-family:var(--mono);font-size:11.5px;color:var(--dim);white-space:nowrap}
+.org{font-family:var(--sans);font-size:13.5px;color:var(--muted);margin:2px 0 8px}
+.job p{margin:0;color:var(--ink);font-size:16.5px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 24px;padding:0;list-style:none}
+.tags li{
+  font-family:var(--mono);font-size:11px;letter-spacing:.04em;
+  color:var(--muted);background:var(--card);
+  border:1px solid var(--rule);border-radius:20px;padding:4px 11px;
+}
+.creds{margin:26px 0 0;padding:0;list-style:none;border-top:1px solid var(--rule)}
+.creds li{
+  display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+  padding:9px 0;border-bottom:1px solid var(--rule);font-size:15.5px;
+}
+.creds .cy{font-family:var(--mono);font-size:11.5px;color:var(--dim);white-space:nowrap}
+
+/* ---------- book ---------- */
+.book{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin:0 0 12px}
+.book h3{
+  font-family:var(--sans);font-size:26px;font-weight:500;font-style:italic;
+  margin:0;color:var(--slate);letter-spacing:.01em;
+}
+.badge{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--teal);border:1px solid var(--teal);border-radius:20px;padding:3px 10px;
+}
+
+/* ---------- link buttons ---------- */
+.links{display:flex;flex-wrap:wrap;gap:9px;margin:0}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--sans);font-size:14px;font-weight:500;text-decoration:none;
+  color:var(--slate);background:var(--card);
+  border:1px solid var(--rule);border-radius:7px;padding:9px 14px;
+  transition:border-color .15s, transform .15s;
+}
+.btn:hover{border-color:var(--teal);transform:translateY(-1px)}
+.btn svg{width:15px;height:15px;flex:none;fill:currentColor;opacity:.7}
+
+/* ---------- stat ---------- */
+.stat{display:flex;align-items:baseline;gap:12px;margin:0 0 14px}
+.stat b{font-family:var(--sans);font-size:34px;font-weight:600;color:var(--slate);line-height:1}
+.stat span{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--dim)}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--rule);padding:30px 0 44px;margin-top:10px}
+.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.foot p{margin:0;font-family:var(--mono);font-size:11.5px;color:var(--dim);letter-spacing:.03em}
+.mail{font-family:var(--mono);font-size:15px;color:var(--teal);text-decoration:none;border-bottom:1px solid var(--rule)}
+.mail:hover{border-color:var(--teal)}
+
+@media (max-width:620px){
+  body{font-size:16px}
+  .hero{grid-template-columns:1fr;gap:20px;padding:36px 0 28px}
+  .portrait{width:112px;height:112px}
+  h1{font-size:31px}
+  .book h3{font-size:22px}
+  .when{white-space:normal}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="brand">Tomas Lebedevas</span>
+    <nav class="langs" aria-label="Language">
+      <button type="button" data-lang="en" lang="en">EN</button>
+      <button type="button" data-lang="lt" lang="lt">LT</button>
+      <button type="button" data-lang="es" lang="es">ES</button>
+      <button type="button" data-lang="de" lang="de">DE</button>
+      <button type="button" data-lang="fr" lang="fr">FR</button>
+    </nav>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <header class="hero">
+    <img class="portrait" src="img/tomas-lebedevas-400.jpg"
+         srcset="img/tomas-lebedevas-400.jpg 1x, img/tomas-lebedevas-800.jpg 2x"
+         width="400" height="400"
+         alt="Tomas Lebedevas" fetchpriority="high" decoding="async">
+    <div>
+      <h1>Tomas Lebedevas</h1>
+      <p class="role" data-i18n="role"></p>
+      <p class="place" data-i18n="place"></p>
+      <p class="lede" data-i18n="lede"></p>
+    </div>
+  </header>
+
+  <section id="work">
+    <h2 data-i18n="work.h"></h2>
+    <p class="lead" data-i18n="work.lead"></p>
+
+    <ul class="tags">
+      <li data-i18n="tag.audit"></li>
+      <li data-i18n="tag.compliance"></li>
+      <li data-i18n="tag.requirements"></li>
+      <li data-i18n="tag.his"></li>
+      <li data-i18n="tag.eidas"></li>
+    </ul>
+
+    <div class="job">
+      <div class="job-top">
+        <h3 data-i18n="j1.title"></h3>
+        <span class="when" data-i18n="j1.when"></span>
+      </div>
+      <p class="org" data-i18n="j1.org"></p>
+      <p data-i18n="j1.desc"></p>
+    </div>
+
+    <div class="job">
+      <div class="job-top">
+        <h3 data-i18n="j2.title"></h3>
+        <span class="when" data-i18n="j2.when"></span>
+      </div>
+      <p class="org" data-i18n="j2.org"></p>
+      <p data-i18n="j2.desc"></p>
+    </div>
+
+    <div class="job">
+      <div class="job-top">
+        <h3 data-i18n="j3.title"></h3>
+        <span class="when" data-i18n="j3.when"></span>
+      </div>
+      <p class="org" data-i18n="j3.org"></p>
+      <p data-i18n="j3.desc"></p>
+    </div>
+
+    <ul class="creds">
+      <li><span data-i18n="c1"></span><span class="cy">2013</span></li>
+      <li><span data-i18n="c2"></span><span class="cy">2011</span></li>
+      <li><span data-i18n="c3"></span><span class="cy" data-i18n="inprog"></span></li>
+      <li><span data-i18n="c4"></span><span class="cy" data-i18n="inprog"></span></li>
+      <li><span data-i18n="c5"></span><span class="cy">2022</span></li>
+      <li><span data-i18n="c6"></span><span class="cy">2016</span></li>
+    </ul>
+  </section>
+
+  <section id="book">
+    <h2 data-i18n="book.h"></h2>
+    <div class="book">
+      <h3>The Reserve</h3>
+      <span class="badge" data-i18n="book.status"></span>
+    </div>
+    <p class="lead" data-i18n="book.lead"></p>
+  </section>
+
+  <section id="photography">
+    <h2 data-i18n="photo.h"></h2>
+    <p class="lead" data-i18n="photo.lead"></p>
+    <div class="links">
+      <a class="btn" href="https://tomlebedev-cloud.github.io/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5c-5 0-9 4.5-9 7s4 7 9 7 9-4.5 9-7-4-7-9-7zm0 11a4 4 0 110-8 4 4 0 010 8zm0-6.2a2.2 2.2 0 100 4.4 2.2 2.2 0 000-4.4z"/></svg>
+        <span data-i18n="photo.portfolio"></span>
+      </a>
+      <a class="btn" href="https://www.instagram.com/tomas.lebedevas.photo/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.05 1.8.25 2.2.42.6.22 1 .48 1.4.9.42.4.68.8.9 1.4.17.4.37 1 .42 2.2.06 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.05 1.2-.25 1.8-.42 2.2-.22.6-.48 1-.9 1.4-.4.42-.8.68-1.4.9-.4.17-1 .37-2.2.42-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.05-1.8-.25-2.2-.42-.6-.22-1-.48-1.4-.9-.42-.4-.68-.8-.9-1.4-.17-.4-.37-1-.42-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.05-1.2.25-1.8.42-2.2.22-.6.48-1 .9-1.4.4-.42.8-.68 1.4-.9.4-.17 1-.37 2.2-.42C8.4 2.2 8.8 2.2 12 2.2zm0 3.1A6.7 6.7 0 1018.7 12 6.7 6.7 0 0012 5.3zm0 11a4.3 4.3 0 114.3-4.3 4.3 4.3 0 01-4.3 4.3zm6.9-11.3a1.6 1.6 0 11-1.6-1.6 1.6 1.6 0 011.6 1.6z"/></svg>
+        <span>@tomas.lebedevas.photo</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="chess">
+    <h2 data-i18n="chess.h"></h2>
+    <div class="stat"><b>2030</b><span data-i18n="chess.rating"></span></div>
+    <p class="lead" data-i18n="chess.lead"></p>
+  </section>
+
+  <section id="sport">
+    <h2 data-i18n="sport.h"></h2>
+    <p class="lead" data-i18n="sport.lead"></p>
+  </section>
+
+  <section id="contact">
+    <h2 data-i18n="contact.h"></h2>
+    <p class="lead"><a class="mail" href="mailto:tomas.lebedevas@icloud.com">tomas.lebedevas@icloud.com</a></p>
+    <div class="links">
+      <a class="btn" href="https://www.linkedin.com/in/tomaslebedevas" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 112.5 6 2.5 2.5 0 014.98 3.5zM3 8.98h4V21H3zM9.5 8.98h3.83v1.64h.05a4.2 4.2 0 013.78-2.08c4.04 0 4.79 2.66 4.79 6.12V21h-4v-5.5c0-1.31-.02-3-1.83-3s-2.12 1.43-2.12 2.9V21h-4z"/></svg>
+        <span>LinkedIn</span>
+      </a>
+      <a class="btn" href="https://github.com/tomlebedev-cloud" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .26.18.58.69.48A10 10 0 0012 2z"/></svg>
+        <span>GitHub</span>
+      </a>
+      <a class="btn" href="https://www.instagram.com/tom.lebedev15/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.05 1.8.25 2.2.42.6.22 1 .48 1.4.9.42.4.68.8.9 1.4.17.4.37 1 .42 2.2.06 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.05 1.2-.25 1.8-.42 2.2-.22.6-.48 1-.9 1.4-.4.42-.8.68-1.4.9-.4.17-1 .37-2.2.42-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.05-1.8-.25-2.2-.42-.6-.22-1-.48-1.4-.9-.42-.4-.68-.8-.9-1.4-.17-.4-.37-1-.42-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.05-1.2.25-1.8.42-2.2.22-.6.48-1 .9-1.4.4-.42.8-.68 1.4-.9.4-.17 1-.37 2.2-.42C8.4 2.2 8.8 2.2 12 2.2zm0 3.1A6.7 6.7 0 1018.7 12 6.7 6.7 0 0012 5.3zm0 11a4.3 4.3 0 114.3-4.3 4.3 4.3 0 01-4.3 4.3zm6.9-11.3a1.6 1.6 0 11-1.6-1.6 1.6 1.6 0 011.6 1.6z"/></svg>
+        <span>@tom.lebedev15</span>
+      </a>
+      <!-- TODO: atkomentuok ir įrašyk tikrus adresus, kai juos duosi.
+      <a class="btn" href="URL-TODO" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 00-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.83.43A2.5 2.5 0 002.4 7.2 26 26 0 002 12a26 26 0 00.4 4.8 2.5 2.5 0 001.77 1.77C5.75 19 12 19 12 19s6.25 0 7.83-.43a2.5 2.5 0 001.77-1.77A26 26 0 0022 12a26 26 0 00-.4-4.8zM10 15V9l5.2 3z"/></svg>
+        <span>YouTube</span>
+      </a>
+      <a class="btn" href="URL-TODO" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 10-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0022 12z"/></svg>
+        <span>Facebook</span>
+      </a>
+      -->
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <div class="foot">
+    <p>© 2026 Tomas Lebedevas</p>
+    <p data-i18n="foot.built"></p>
+  </div>
+</footer>
+
+<script>
+const I18N = {
+  en: {
+    role: "Information systems analyst · Writer · Photographer",
+    place: "Vilnius, Lithuania",
+    lede: "Ten years in regulated environments — hospital and laboratory information systems, and since 2024 the national eIDAS node. Most of my work is written: requirements, IT and data protection policies, risk registers, budgets, and the evidence auditors ask for. Away from the desk there is a manuscript, a camera, a chess clock and a barbell.",
+    "work.h": "Work",
+    "work.lead": "Information systems specialist. I work where healthcare IT, security compliance and audit evidence meet.",
+    "tag.audit": "IT audit",
+    "tag.compliance": "GDPR · NIS2 · ISO/IEC 27001",
+    "tag.requirements": "Requirements analysis",
+    "tag.his": "Hospital and laboratory systems",
+    "tag.eidas": "eIDAS · PKI",
+    "j1.title": "IT Systems Supervision and Support Specialist",
+    "j1.when": "Sep 2018 — present",
+    "j1.org": "UAB „Diagnostinės sistemos“ · Vilnius · medical IT for hospitals and laboratories",
+    "j1.desc": "Responsible for the IT behind hospital and laboratory information systems used by 15+ institutions — when these stop, clinical and laboratory work stops with them. Carried out a full IT audit in 2026: asset inventory, a risk register with 20 entries, a two-year budget and an equipment replacement schedule. Replacing every machine that failed the requirements would have cost €15,300; assessing each one separately brought that down to €7,225. Wrote the internal IT and data protection policies the company is audited against, and keep the evidence for those audits.",
+    "j2.title": "Administrator of Computer Systems",
+    "j2.when": "Feb 2024 — Oct 2025",
+    "j2.org": "Department of Informatics and Communications under the Ministry of the Interior · Vilnius · concurrent role",
+    "j2.desc": "Administered the national eIDAS node, which other EU member states use to authenticate Lithuanian citizens, with connections to 10+ member states. Ran node software and certificate upgrades without unplanned downtime. Represented the Lithuanian node at EU interoperability testing in Berlin, July 2025 — passed with all participating member states. Worked on the EU Digital Identity Wallet pilot „Potential“, mainly on its integration with the eIDAS network.",
+    "j3.title": "Product Manager",
+    "j3.when": "Dec 2015 — Sep 2018",
+    "j3.org": "UAB „Diagnostinės sistemos“ · Vilnius · HIS/LIS, telemetry and point-of-care systems",
+    "j3.desc": "Gathered requirements on site from clinicians, laboratory technicians and IT staff, then wrote the specifications for the medical IT solutions. Responsible for product direction for platforms installed in 15+ hospitals and laboratories, from the first meeting through delivery and later support. Reorganised support and escalation after analysing ticket data — issue resolution time dropped 25%.",
+    c1: "MSc, Environmental and Chemical Physics — Vilnius University",
+    c2: "BSc, Computational Physics — Vilnius University",
+    c3: "ITIL 4 Foundation",
+    c4: "Microsoft Azure Fundamentals (AZ-900)",
+    c5: "Personal Trainer, B licence — Aeromix, Vilnius",
+    c6: "Strategic Sales — Mercury International",
+    inprog: "in progress",
+    "book.h": "Book",
+    "book.status": "in progress",
+    "book.lead": "A book I am currently writing.",
+    "photo.h": "Photography",
+    "photo.lead": "Travel, wildlife and street photography. Work from Morocco, Tanzania, Italy, the United States and beyond.",
+    "photo.portfolio": "Portfolio",
+    "chess.h": "Chess",
+    "chess.rating": "rating",
+    "chess.lead": "The same pattern-finding as an audit, only with a clock running. I play regularly.",
+    "sport.h": "Sport",
+    "sport.lead": "Endurance and strength training, and a personal trainer B licence earned in 2022 — mostly so that I would understand what I was doing to myself.",
+    "contact.h": "Contact",
+    "foot.built": "Vilnius, Lithuania"
+  },
+
+  lt: {
+    role: "Informacinių sistemų analitikas · Rašytojas · Fotografas",
+    place: "Vilnius, Lietuva",
+    lede: "Dešimt metų reguliuojamoje aplinkoje — ligoninių ir laboratorijų informacinės sistemos, o nuo 2024-ųjų ir nacionalinis eIDAS mazgas. Didžioji darbo dalis yra rašytinė: reikalavimai, IT ir duomenų apsaugos politikos, rizikų registrai, biudžetai ir įrodymai, kurių prašo auditoriai. Nuo stalo pakilus — rankraštis, fotoaparatas, šachmatų laikrodis ir štanga.",
+    "work.h": "Darbas",
+    "work.lead": "Informacinių sistemų specialistas. Dirbu ten, kur susitinka sveikatos IT, saugos atitiktis ir audito įrodymai.",
+    "tag.audit": "IT auditas",
+    "tag.compliance": "BDAR · NIS2 · ISO/IEC 27001",
+    "tag.requirements": "Reikalavimų analizė",
+    "tag.his": "Ligoninių ir laboratorijų sistemos",
+    "tag.eidas": "eIDAS · PKI",
+    "j1.title": "IT sistemų priežiūros ir aptarnavimo specialistas",
+    "j1.when": "2018 09 — dabar",
+    "j1.org": "UAB „Diagnostinės sistemos“ · Vilnius · medicininis IT ligoninėms ir laboratorijoms",
+    "j1.desc": "Atsakingas už IT, ant kurio laikosi 15+ įstaigų naudojamos ligoninių ir laboratorijų informacinės sistemos — joms sustojus, sustoja ir klinikinis bei laboratorinis darbas. 2026 m. atlikau pilną IT auditą: turto inventorizaciją, 20 įrašų rizikų registrą, dvejų metų biudžetą ir įrangos keitimo grafiką. Pakeisti visą reikalavimų neatitikusią techniką būtų kainavę 15 300 €; įvertinus kiekvieną atskirai, suma sumažėjo iki 7 225 €. Parašiau vidines IT ir duomenų apsaugos politikas, pagal kurias įmonė yra audituojama, ir kaupiu tų auditų įrodymus.",
+    "j2.title": "Kompiuterinių sistemų administratorius",
+    "j2.when": "2024 02 — 2025 10",
+    "j2.org": "Informatikos ir ryšių departamentas prie VRM · Vilnius · gretutinės pareigos",
+    "j2.desc": "Administravau nacionalinį eIDAS mazgą, kuriuo kitos ES valstybės narės autentifikuoja Lietuvos piliečius — sujungimai su 10+ valstybių narių. Vykdžiau mazgo programinės įrangos ir sertifikatų atnaujinimus be neplanuotų prastovų. 2025 m. liepą atstovavau Lietuvos mazgui ES sąveikumo testavime Berlyne — testai išlaikyti su visomis dalyvavusiomis valstybėmis narėmis. Dirbau prie ES skaitmeninės tapatybės piniginės bandomojo projekto „Potential“, daugiausia ties jo integracija su eIDAS tinklu.",
+    "j3.title": "Produkto vadovas",
+    "j3.when": "2015 12 — 2018 09",
+    "j3.org": "UAB „Diagnostinės sistemos“ · Vilnius · HIS/LIS, telemetrijos ir point-of-care sistemos",
+    "j3.desc": "Rinkau reikalavimus vietoje — iš gydytojų, laborantų ir IT darbuotojų — ir rašiau medicininio IT sprendimų specifikacijas. Atsakingas už produktų kryptį platformoms, įdiegtoms 15+ ligoninių ir laboratorijų: nuo pirmo susitikimo iki įdiegimo ir vėlesnio palaikymo. Išanalizavęs užklausų duomenis pertvarkiau aptarnavimo ir eskalavimo procesą — problemų sprendimo laikas sutrumpėjo 25 %.",
+    c1: "Magistras, aplinkos ir cheminė fizika — Vilniaus universitetas",
+    c2: "Bakalauras, kompiuterinė fizika — Vilniaus universitetas",
+    c3: "ITIL 4 Foundation",
+    c4: "Microsoft Azure Fundamentals (AZ-900)",
+    c5: "Asmeninis treneris, B licencija — Aeromix, Vilnius",
+    c6: "Strateginiai pardavimai — Mercury International",
+    inprog: "rengiama",
+    "book.h": "Knyga",
+    "book.status": "rašoma",
+    "book.lead": "Knyga, kurią šiuo metu rašau.",
+    "photo.h": "Fotografija",
+    "photo.lead": "Kelionių, laukinės gamtos ir gatvės fotografija. Darbai iš Maroko, Tanzanijos, Italijos, JAV ir kitur.",
+    "photo.portfolio": "Portfolio",
+    "chess.h": "Šachmatai",
+    "chess.rating": "reitingas",
+    "chess.lead": "Tas pats dėsningumų ieškojimas kaip audite, tik su tiksinčiu laikrodžiu. Žaidžiu reguliariai.",
+    "sport.h": "Sportas",
+    "sport.lead": "Ištvermės ir jėgos treniruotės, o 2022 m. — asmeninio trenerio B licencija; daugiausia tam, kad pats suprasčiau, ką sau darau.",
+    "contact.h": "Kontaktai",
+    "foot.built": "Vilnius, Lietuva"
+  },
+
+  es: {
+    role: "Analista de sistemas de información · Escritor · Fotógrafo",
+    place: "Vilna, Lituania",
+    lede: "Diez años en entornos regulados: sistemas de información hospitalarios y de laboratorio y, desde 2024, el nodo eIDAS nacional. La mayor parte de mi trabajo es escrito: requisitos, políticas de TI y protección de datos, registros de riesgos, presupuestos y las evidencias que piden los auditores. Lejos del escritorio hay un manuscrito, una cámara, un reloj de ajedrez y una barra.",
+    "work.h": "Trabajo",
+    "work.lead": "Especialista en sistemas de información. Trabajo donde se cruzan la TI sanitaria, el cumplimiento en seguridad y la evidencia de auditoría.",
+    "tag.audit": "Auditoría TI",
+    "tag.compliance": "RGPD · NIS2 · ISO/IEC 27001",
+    "tag.requirements": "Análisis de requisitos",
+    "tag.his": "Sistemas hospitalarios y de laboratorio",
+    "tag.eidas": "eIDAS · PKI",
+    "j1.title": "Especialista en supervisión y soporte de sistemas TI",
+    "j1.when": "Sep 2018 — actualidad",
+    "j1.org": "UAB „Diagnostinės sistemos“ · Vilna · TI médica para hospitales y laboratorios",
+    "j1.desc": "Responsable de la TI que sostiene los sistemas de información hospitalarios y de laboratorio de más de 15 instituciones: cuando se detienen, se detiene con ellos el trabajo clínico y de laboratorio. En 2026 realicé una auditoría TI completa: inventario de activos, un registro de riesgos con 20 entradas, un presupuesto a dos años y un calendario de reposición de equipos. Sustituir todas las máquinas que no cumplían los requisitos habría costado 15 300 €; evaluando cada una por separado, la cifra bajó a 7 225 €. Redacté las políticas internas de TI y protección de datos con las que se audita a la empresa y conservo las evidencias de esas auditorías.",
+    "j2.title": "Administrador de sistemas informáticos",
+    "j2.when": "Feb 2024 — Oct 2025",
+    "j2.org": "Departamento de Informática y Comunicaciones del Ministerio del Interior · Vilna · puesto simultáneo",
+    "j2.desc": "Administré el nodo eIDAS nacional, que otros Estados miembros de la UE utilizan para autenticar a ciudadanos lituanos, con conexiones a más de 10 Estados miembros. Ejecuté actualizaciones de software y certificados del nodo sin paradas imprevistas. Representé al nodo lituano en las pruebas de interoperabilidad de la UE en Berlín, julio de 2025, superadas con todos los Estados miembros participantes. Participé en el piloto de la Cartera de Identidad Digital de la UE „Potential“, sobre todo en su integración con la red eIDAS.",
+    "j3.title": "Product Manager",
+    "j3.when": "Dic 2015 — Sep 2018",
+    "j3.org": "UAB „Diagnostinės sistemos“ · Vilna · HIS/LIS, telemetría y sistemas point-of-care",
+    "j3.desc": "Recogí requisitos in situ de personal clínico, técnicos de laboratorio y personal de TI, y redacté las especificaciones de las soluciones de TI médica. Responsable de la dirección de producto de plataformas instaladas en más de 15 hospitales y laboratorios, desde la primera reunión hasta la entrega y el soporte posterior. Reorganicé el soporte y el escalado tras analizar los datos de tickets: el tiempo de resolución bajó un 25 %.",
+    c1: "Máster en Física Ambiental y Química — Universidad de Vilna",
+    c2: "Grado en Física Computacional — Universidad de Vilna",
+    c3: "ITIL 4 Foundation",
+    c4: "Microsoft Azure Fundamentals (AZ-900)",
+    c5: "Entrenador personal, licencia B — Aeromix, Vilna",
+    c6: "Ventas estratégicas — Mercury International",
+    inprog: "en curso",
+    "book.h": "Libro",
+    "book.status": "en curso",
+    "book.lead": "Un libro que estoy escribiendo actualmente.",
+    "photo.h": "Fotografía",
+    "photo.lead": "Fotografía de viajes, naturaleza y calle. Trabajos de Marruecos, Tanzania, Italia, Estados Unidos y otros lugares.",
+    "photo.portfolio": "Portafolio",
+    "chess.h": "Ajedrez",
+    "chess.rating": "elo",
+    "chess.lead": "La misma búsqueda de patrones que en una auditoría, pero con el reloj en marcha. Juego con regularidad.",
+    "sport.h": "Deporte",
+    "sport.lead": "Entrenamiento de resistencia y fuerza, y una licencia B de entrenador personal obtenida en 2022, sobre todo para entender qué me estaba haciendo a mí mismo.",
+    "contact.h": "Contacto",
+    "foot.built": "Vilna, Lituania"
+  },
+
+  de: {
+    role: "Analyst für Informationssysteme · Autor · Fotograf",
+    place: "Vilnius, Litauen",
+    lede: "Zehn Jahre in regulierten Umgebungen — Krankenhaus- und Laborinformationssysteme und seit 2024 der nationale eIDAS-Knoten. Der größte Teil meiner Arbeit ist geschrieben: Anforderungen, IT- und Datenschutzrichtlinien, Risikoregister, Budgets und die Nachweise, nach denen Auditoren fragen. Abseits des Schreibtischs: ein Manuskript, eine Kamera, eine Schachuhr und eine Langhantel.",
+    "work.h": "Beruf",
+    "work.lead": "Spezialist für Informationssysteme. Ich arbeite dort, wo Gesundheits-IT, Sicherheits-Compliance und Auditnachweise zusammenkommen.",
+    "tag.audit": "IT-Audit",
+    "tag.compliance": "DSGVO · NIS2 · ISO/IEC 27001",
+    "tag.requirements": "Anforderungsanalyse",
+    "tag.his": "Krankenhaus- und Laborsysteme",
+    "tag.eidas": "eIDAS · PKI",
+    "j1.title": "Spezialist für Betreuung und Support von IT-Systemen",
+    "j1.when": "Sep 2018 — heute",
+    "j1.org": "UAB „Diagnostinės sistemos“ · Vilnius · Medizin-IT für Kliniken und Labore",
+    "j1.desc": "Verantwortlich für die IT hinter den Krankenhaus- und Laborinformationssystemen von über 15 Einrichtungen — stehen sie still, steht die klinische und die Laborarbeit mit ihnen still. 2026 führte ich ein vollständiges IT-Audit durch: Bestandsaufnahme, ein Risikoregister mit 20 Einträgen, ein Zweijahresbudget und einen Austauschplan für Geräte. Alle Geräte zu ersetzen, die die Anforderungen nicht erfüllten, hätte 15 300 € gekostet; nach Einzelbewertung waren es 7 225 €. Ich habe die internen IT- und Datenschutzrichtlinien verfasst, nach denen das Unternehmen auditiert wird, und führe die Nachweise für diese Audits.",
+    "j2.title": "Administrator für Computersysteme",
+    "j2.when": "Feb 2024 — Okt 2025",
+    "j2.org": "Abteilung für Informatik und Kommunikation beim Innenministerium · Vilnius · parallele Tätigkeit",
+    "j2.desc": "Administration des nationalen eIDAS-Knotens, über den andere EU-Mitgliedstaaten litauische Bürger authentifizieren — mit Verbindungen zu über 10 Mitgliedstaaten. Software- und Zertifikatsaktualisierungen des Knotens ohne ungeplante Ausfallzeiten. Im Juli 2025 vertrat ich den litauischen Knoten beim EU-Interoperabilitätstest in Berlin — bestanden mit allen teilnehmenden Mitgliedstaaten. Mitarbeit am EU-Pilotprojekt zur digitalen Identitäts-Wallet „Potential“, vor allem an dessen Anbindung an das eIDAS-Netz.",
+    "j3.title": "Produktmanager",
+    "j3.when": "Dez 2015 — Sep 2018",
+    "j3.org": "UAB „Diagnostinės sistemos“ · Vilnius · HIS/LIS, Telemetrie und Point-of-Care-Systeme",
+    "j3.desc": "Anforderungen vor Ort bei Ärztinnen und Ärzten, Laborpersonal und IT-Mitarbeitenden erhoben und anschließend die Spezifikationen für die Medizin-IT-Lösungen geschrieben. Verantwortlich für die Produktausrichtung von Plattformen in über 15 Kliniken und Laboren, vom ersten Gespräch über die Einführung bis zum späteren Support. Nach Auswertung der Ticketdaten Support und Eskalation neu organisiert — die Lösungszeit sank um 25 %.",
+    c1: "M.Sc. Umwelt- und Chemiephysik — Universität Vilnius",
+    c2: "B.Sc. Computerphysik — Universität Vilnius",
+    c3: "ITIL 4 Foundation",
+    c4: "Microsoft Azure Fundamentals (AZ-900)",
+    c5: "Personal Trainer, B-Lizenz — Aeromix, Vilnius",
+    c6: "Strategischer Vertrieb — Mercury International",
+    inprog: "in Arbeit",
+    "book.h": "Buch",
+    "book.status": "in Arbeit",
+    "book.lead": "Ein Buch, an dem ich derzeit schreibe.",
+    "photo.h": "Fotografie",
+    "photo.lead": "Reise-, Wildlife- und Straßenfotografie. Arbeiten aus Marokko, Tansania, Italien, den USA und anderswo.",
+    "photo.portfolio": "Portfolio",
+    "chess.h": "Schach",
+    "chess.rating": "Wertung",
+    "chess.lead": "Dieselbe Mustersuche wie bei einem Audit, nur mit laufender Uhr. Ich spiele regelmäßig.",
+    "sport.h": "Sport",
+    "sport.lead": "Ausdauer- und Krafttraining sowie eine 2022 erworbene B-Lizenz als Personal Trainer — vor allem, um zu verstehen, was ich mir da antue.",
+    "contact.h": "Kontakt",
+    "foot.built": "Vilnius, Litauen"
+  },
+
+  fr: {
+    role: "Analyste des systèmes d'information · Auteur · Photographe",
+    place: "Vilnius, Lituanie",
+    lede: "Dix ans en environnement réglementé — systèmes d'information hospitaliers et de laboratoire, et depuis 2024 le nœud eIDAS national. L'essentiel de mon travail est écrit : exigences, politiques informatiques et de protection des données, registres de risques, budgets et les preuves que réclament les auditeurs. Loin du bureau : un manuscrit, un appareil photo, une pendule d'échecs et une barre.",
+    "work.h": "Travail",
+    "work.lead": "Spécialiste des systèmes d'information. Je travaille là où se rejoignent l'informatique de santé, la conformité en sécurité et la preuve d'audit.",
+    "tag.audit": "Audit informatique",
+    "tag.compliance": "RGPD · NIS2 · ISO/IEC 27001",
+    "tag.requirements": "Analyse des exigences",
+    "tag.his": "Systèmes hospitaliers et de laboratoire",
+    "tag.eidas": "eIDAS · PKI",
+    "j1.title": "Spécialiste supervision et support des systèmes informatiques",
+    "j1.when": "Sept. 2018 — aujourd'hui",
+    "j1.org": "UAB « Diagnostinės sistemos » · Vilnius · informatique médicale pour hôpitaux et laboratoires",
+    "j1.desc": "Responsable de l'informatique qui porte les systèmes d'information hospitaliers et de laboratoire de plus de 15 établissements : lorsqu'ils s'arrêtent, le travail clinique et de laboratoire s'arrête avec eux. En 2026, j'ai mené un audit informatique complet : inventaire des actifs, registre de risques de 20 entrées, budget sur deux ans et calendrier de remplacement du matériel. Remplacer toutes les machines non conformes aurait coûté 15 300 € ; en les évaluant une par une, la somme est tombée à 7 225 €. J'ai rédigé les politiques internes informatiques et de protection des données sur lesquelles l'entreprise est auditée, et j'en conserve les preuves.",
+    "j2.title": "Administrateur de systèmes informatiques",
+    "j2.when": "Févr. 2024 — oct. 2025",
+    "j2.org": "Département de l'informatique et des communications, ministère de l'Intérieur · Vilnius · poste concomitant",
+    "j2.desc": "Administration du nœud eIDAS national, utilisé par d'autres États membres de l'UE pour authentifier les citoyens lituaniens, avec des connexions à plus de 10 États membres. Mises à jour logicielles et de certificats du nœud sans interruption imprévue. J'ai représenté le nœud lituanien aux tests d'interopérabilité de l'UE à Berlin en juillet 2025 — réussis avec tous les États membres participants. Participation au projet pilote de portefeuille d'identité numérique de l'UE « Potential », principalement sur son intégration au réseau eIDAS.",
+    "j3.title": "Chef de produit",
+    "j3.when": "Déc. 2015 — sept. 2018",
+    "j3.org": "UAB « Diagnostinės sistemos » · Vilnius · HIS/LIS, télémétrie et systèmes point-of-care",
+    "j3.desc": "Recueil des exigences sur site auprès des cliniciens, des techniciens de laboratoire et des équipes informatiques, puis rédaction des spécifications des solutions d'informatique médicale. Responsable de l'orientation produit de plateformes installées dans plus de 15 hôpitaux et laboratoires, du premier rendez-vous à la livraison et au support. Réorganisation du support et de l'escalade après analyse des données de tickets — le temps de résolution a baissé de 25 %.",
+    c1: "Master, physique de l'environnement et chimique — Université de Vilnius",
+    c2: "Licence, physique computationnelle — Université de Vilnius",
+    c3: "ITIL 4 Foundation",
+    c4: "Microsoft Azure Fundamentals (AZ-900)",
+    c5: "Coach sportif, licence B — Aeromix, Vilnius",
+    c6: "Vente stratégique — Mercury International",
+    inprog: "en cours",
+    "book.h": "Livre",
+    "book.status": "en cours",
+    "book.lead": "Un livre que je suis en train d'écrire.",
+    "photo.h": "Photographie",
+    "photo.lead": "Photographie de voyage, animalière et de rue. Travaux réalisés au Maroc, en Tanzanie, en Italie, aux États-Unis et ailleurs.",
+    "photo.portfolio": "Portfolio",
+    "chess.h": "Échecs",
+    "chess.rating": "classement",
+    "chess.lead": "La même recherche de motifs qu'en audit, mais avec la pendule qui tourne. Je joue régulièrement.",
+    "sport.h": "Sport",
+    "sport.lead": "Entraînement d'endurance et de force, et une licence B de coach sportif obtenue en 2022 — surtout pour comprendre ce que je m'infligeais.",
+    "contact.h": "Contact",
+    "foot.built": "Vilnius, Lituanie"
+  }
+};
+
+const DESC = {
+  en: "Tomas Lebedevas — information systems analyst in Vilnius, Lithuania. IT audit and compliance, writing, photography, chess, endurance and strength sport.",
+  lt: "Tomas Lebedevas — informacinių sistemų analitikas Vilniuje. IT auditas ir atitiktis, rašymas, fotografija, šachmatai, ištvermės ir jėgos sportas.",
+  es: "Tomas Lebedevas — analista de sistemas de información en Vilna, Lituania. Auditoría TI y cumplimiento, escritura, fotografía, ajedrez y deporte.",
+  de: "Tomas Lebedevas — Analyst für Informationssysteme in Vilnius, Litauen. IT-Audit und Compliance, Schreiben, Fotografie, Schach und Sport.",
+  fr: "Tomas Lebedevas — analyste des systèmes d'information à Vilnius, Lituanie. Audit informatique et conformité, écriture, photographie, échecs et sport."
+};
+
+const SUPPORTED = Object.keys(I18N);
+
+function setLang(lang){
+  if (!I18N[lang]) lang = "en";
+  const dict = I18N[lang];
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-i18n]").forEach(function(el){
+    const v = dict[el.getAttribute("data-i18n")];
+    if (v != null) el.textContent = v;
+  });
+  const meta = document.getElementById("meta-desc");
+  if (meta && DESC[lang]) meta.setAttribute("content", DESC[lang]);
+  document.querySelectorAll(".langs button").forEach(function(b){
+    b.setAttribute("aria-current", String(b.dataset.lang === lang));
+  });
+  try { localStorage.setItem("lang", lang); } catch (e) {}
+}
+
+function initialLang(){
+  try {
+    const saved = localStorage.getItem("lang");
+    if (saved && I18N[saved]) return saved;
+  } catch (e) {}
+  const prefs = navigator.languages || [navigator.language || "en"];
+  for (const pref of prefs) {
+    const code = String(pref).slice(0, 2).toLowerCase();
+    if (SUPPORTED.indexOf(code) !== -1) return code;
+  }
+  return "en";
+}
+
+document.querySelectorAll(".langs button").forEach(function(b){
+  b.addEventListener("click", function(){ setLang(b.dataset.lang); });
+});
+setLang(initialLang());
+</script>
+
+</body>
+</html>
