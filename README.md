@@ -54,16 +54,19 @@ Pirmas variantas su IT darbų sąrašu yra tik vietinėje šakoje `pirmas-varian
 
 ### Savas domenas
 
-Kai domenas bus paruoštas, repo šaknyje sukurti `CNAME` failą su viena eilute:
+`tomaslebedevas.com` nupirktas 2026-09-11 **Cloudflare** (registratorius ir DNS, NS
+`edna` / `olof.ns.cloudflare.com`), galioja iki 2027-09-11. Repo šaknyje yra `CNAME` failas.
 
-```
-tomaslebedevas.com
-```
+DNS įrašai (visi **DNS only**, pilkas debesis — su Cloudflare proxy GitHub neišduos
+sertifikato, o SSL Flexible režime atsiranda peradresavimų ciklas):
 
-DNS registratoriuje:
+- `A` `@` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+- `AAAA` `@` → `2606:50c0:8000::153`, `…8001::153`, `…8002::153`, `…8003::153`
+- `CNAME` `www` → `tomlebedev-cloud.github.io`
+- `TXT` `_github-pages-challenge-tomlebedev-cloud` → reikšmė iš GitHub (domeno patvirtinimas)
 
-- `A` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-- Settings → Pages → Enforce HTTPS
+Importui paruoštas `cloudflare-dns-import.txt` (tik vietinis, į GitHub nekeliamas).
+Po DNS: repo Settings → Pages → Enforce HTTPS.
 
 ## Peržiūra lokaliai
 
