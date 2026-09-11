@@ -383,7 +383,10 @@ footer{background:var(--white)}
         <h2 data-i18n="photo.h"></h2>
         <p data-i18n="photo.lead"></p>
         <div class="links">
-          <a class="btn btn-sm" href="https://tomaslebedevas.photography/" target="_blank" rel="noopener"><span data-i18n="photo.portfolio"></span></a>
+          <a class="btn btn-sm btn-primary" href="https://tomaslebedevas.photography/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.4l-8.3 8.3-1.4-1.4L17.6 5H14V3zM5 5h6v2H5v12h12v-6h2v6a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2z"/></svg>
+            <span>tomaslebedevas.photography</span>
+          </a>
           <a class="btn btn-sm" href="https://www.instagram.com/tomas.lebedevas.photo/" target="_blank" rel="noopener">Instagram</a>
         </div>
       </article>
@@ -419,6 +422,10 @@ footer{background:var(--white)}
         <a class="btn" href="https://www.linkedin.com/in/tomaslebedevas" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 112.5 6 2.5 2.5 0 014.98 3.5zM3 8.98h4V21H3zM9.5 8.98h3.83v1.64h.05a4.2 4.2 0 013.78-2.08c4.04 0 4.79 2.66 4.79 6.12V21h-4v-5.5c0-1.31-.02-3-1.83-3s-2.12 1.43-2.12 2.9V21h-4z"/></svg>
           <span>LinkedIn</span>
+        </a>
+        <a class="btn" href="https://tomaslebedevas.photography/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M9 4L7.5 6H5a2 2 0 00-2 2v10a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-2.5L15 4H9zm3 3.5a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z"/></svg>
+          <span>tomaslebedevas.photography</span>
         </a>
         <a class="btn" href="https://github.com/tomlebedev-cloud" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .26.18.58.69.48A10 10 0 0012 2z"/></svg>
@@ -462,7 +469,6 @@ const I18N = {
     "book.lead": "Exercise physiology for longevity. The book looks at six physiological reserves (aerobic capacity, strength, power, bone, balance and metabolism), how each of them declines with age, and what training can do about it. Working manuscript, 15 chapters.",
     "photo.h": "Photography",
     "photo.lead": "Travel, wildlife and street photography. Work from Morocco, Tanzania, Italy, the United States and beyond.",
-    "photo.portfolio": "Portfolio",
     "chess.h": "Chess",
     "chess.rating": "rating",
     "chess.lead": "I play regularly.",
@@ -486,7 +492,6 @@ const I18N = {
     "book.lead": "Fizinio krūvio fiziologija ilgaamžiškumui. Knygoje nagrinėju šešis organizmo rezervus (aerobinį pajėgumą, jėgą, galią, kaulus, pusiausvyrą ir medžiagų apykaitą), kaip kiekvienas jų mažėja su amžiumi ir ką su tuo gali padaryti treniruotės. Rankraštis, 15 skyrių.",
     "photo.h": "Fotografija",
     "photo.lead": "Kelionių, laukinės gamtos ir gatvės fotografija. Darbai iš Maroko, Tanzanijos, Italijos, JAV ir kitur.",
-    "photo.portfolio": "Portfolio",
     "chess.h": "Šachmatai",
     "chess.rating": "reitingas",
     "chess.lead": "Žaidžiu reguliariai.",
@@ -510,7 +515,6 @@ const I18N = {
     "book.lead": "Fisiología del ejercicio para la longevidad. El libro analiza seis reservas fisiológicas (capacidad aeróbica, fuerza, potencia, hueso, equilibrio y metabolismo), cómo disminuye cada una con la edad y qué puede hacer el entrenamiento al respecto. Manuscrito en curso, 15 capítulos.",
     "photo.h": "Fotografía",
     "photo.lead": "Fotografía de viajes, naturaleza y calle. Trabajos de Marruecos, Tanzania, Italia, Estados Unidos y otros lugares.",
-    "photo.portfolio": "Portafolio",
     "chess.h": "Ajedrez",
     "chess.rating": "elo",
     "chess.lead": "Juego con regularidad.",
@@ -534,7 +538,6 @@ const I18N = {
     "book.lead": "Trainingsphysiologie für ein langes Leben. Das Buch behandelt sechs physiologische Reserven (aerobe Kapazität, Kraft, Schnellkraft, Knochen, Gleichgewicht und Stoffwechsel), wie jede davon mit dem Alter abnimmt und was Training dagegen tun kann. Manuskript, 15 Kapitel.",
     "photo.h": "Fotografie",
     "photo.lead": "Reise-, Wildlife- und Straßenfotografie. Arbeiten aus Marokko, Tansania, Italien, den USA und anderswo.",
-    "photo.portfolio": "Portfolio",
     "chess.h": "Schach",
     "chess.rating": "Wertung",
     "chess.lead": "Ich spiele regelmäßig.",
@@ -558,7 +561,6 @@ const I18N = {
     "book.lead": "Physiologie de l'exercice pour la longévité. Le livre étudie six réserves physiologiques (capacité aérobie, force, puissance, os, équilibre et métabolisme), la façon dont chacune diminue avec l'âge et ce que l'entraînement peut y faire. Manuscrit en cours, 15 chapitres.",
     "photo.h": "Photographie",
     "photo.lead": "Photographie de voyage, animalière et de rue. Travaux réalisés au Maroc, en Tanzanie, en Italie, aux États-Unis et ailleurs.",
-    "photo.portfolio": "Portfolio",
     "chess.h": "Échecs",
     "chess.rating": "classement",
     "chess.lead": "Je joue régulièrement.",
