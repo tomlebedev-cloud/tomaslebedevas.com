@@ -44,10 +44,10 @@ nukreiptos į `tomaslebedevas.photography`; pridėti `canonical`, `og:url` ir pi
 Repozitorija: https://github.com/tomlebedev-cloud/tomaslebedevas.com (vieša, sukurta 2026-09-11).
 Pages šaltinis: `main` / root. Atnaujinimas — `git push`, puslapis persigeneruoja per ~1 min.
 
-Kol savo domeno nėra, puslapis veikia adresu
-https://tomaslebedevas.photography/tomaslebedevas.com/ — GitHub nukreipia per fotografijos
-domeną, nes vartotojo puslapis `tomlebedev-cloud.github.io` turi savą domeną. Nuorodos
-niekam nesiųsti, kol neprijungtas `tomaslebedevas.com`.
+Puslapis veikia adresu https://tomaslebedevas.com/ (HTTPS priverstinis, domenas patvirtintas
+GitHub paskyroje). Fotografijos repozitorija 2026-09-11 pervadinta iš
+`tomlebedev-cloud.github.io` į `tomaslebedevas.photography`, todėl vartotojo puslapio
+`tomlebedev-cloud.github.io` nebėra.
 
 Pirmas variantas su IT darbų sąrašu yra tik vietinėje šakoje `pirmas-variantas-2026-09-10`
 — į GitHub jos nekelti.
