@@ -31,7 +31,6 @@
   "knowsAbout": ["Exercise physiology", "Longevity", "Personal training", "Medical technology", "Photography", "Chess"],
   "sameAs": [
     "https://www.linkedin.com/in/tomaslebedevas",
-    "https://github.com/tomlebedev-cloud",
     "https://tomaslebedevas.photography/",
     "https://www.instagram.com/tomas.lebedevas.photo/",
     "https://www.instagram.com/tom.lebedev15/",
@@ -177,6 +176,12 @@ h2::before{content:"";display:block;width:38px;height:3px;border-radius:3px;back
 .split{display:grid;grid-template-columns:280px minmax(0,1fr);gap:64px;align-items:start}
 .split h2{margin:0}
 .about-text{font-size:19px;line-height:1.75;color:var(--ink);margin:0;max-width:40em}
+.edu-h{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-700);margin:44px 0 12px}
+.edu{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule);max-width:40em}
+.edu li{display:grid;grid-template-columns:64px minmax(0,1fr);gap:20px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--rule)}
+.edu-y{font-size:14px;font-weight:600;color:var(--blue-700);font-variant-numeric:tabular-nums}
+.edu b{display:block;font-size:17px;font-weight:600;line-height:1.4;color:var(--navy)}
+.edu li div span{display:block;font-size:15px;color:var(--muted)}
 
 /* book */
 .book{
@@ -349,7 +354,15 @@ footer{background:var(--white)}
   <section class="section" id="about">
     <div class="wrap split">
       <h2 data-i18n="about.h"></h2>
-      <p class="about-text" data-i18n="about.lead"></p>
+      <div>
+        <p class="about-text" data-i18n="about.lead"></p>
+        <h3 class="edu-h" data-i18n="edu.h"></h3>
+        <ul class="edu">
+          <li><span class="edu-y">2013</span><div><b data-i18n="edu.msc"></b><span data-i18n="edu.uni"></span></div></li>
+          <li><span class="edu-y">2011</span><div><b data-i18n="edu.bsc"></b><span data-i18n="edu.uni"></span></div></li>
+          <li><span class="edu-y">edX</span><div><b>Introduction to Solid-State Chemistry</b><span>MITx 3.091</span></div></li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -409,6 +422,12 @@ footer{background:var(--white)}
         <h2 data-i18n="trainer.h"></h2>
         <div class="stat"><b>B</b><span data-i18n="trainer.licence"></span></div>
         <p data-i18n="trainer.lead"></p>
+        <div class="links">
+          <a class="btn btn-sm btn-primary" href="mailto:tomas.lebedevas@icloud.com?subject=Personal%20training">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 011 1v12a1 1 0 01-1 1H3a1 1 0 01-1-1V6a1 1 0 011-1zm1 2.3V17h16V7.3l-8 5.4-8-5.4zM5.8 7L12 11.2 18.2 7H5.8z"/></svg>
+            <span data-i18n="trainer.cta"></span>
+          </a>
+        </div>
       </article>
 
     </div>
@@ -426,10 +445,6 @@ footer{background:var(--white)}
         <a class="btn" href="https://tomaslebedevas.photography/" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M9 4L7.5 6H5a2 2 0 00-2 2v10a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-2.5L15 4H9zm3 3.5a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z"/></svg>
           <span>tomaslebedevas.photography</span>
-        </a>
-        <a class="btn" href="https://github.com/tomlebedev-cloud" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .26.18.58.69.48A10 10 0 0012 2z"/></svg>
-          <span>GitHub</span>
         </a>
         <a class="btn" href="https://www.instagram.com/tom.lebedev15/" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.05 1.8.25 2.2.42.6.22 1 .48 1.4.9.42.4.68.8.9 1.4.17.4.37 1 .42 2.2.06 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.05 1.2-.25 1.8-.42 2.2-.22.6-.48 1-.9 1.4-.4.42-.8.68-1.4.9-.4.17-1 .37-2.2.42-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.05-1.8-.25-2.2-.42-.6-.22-1-.48-1.4-.9-.42-.4-.68-.8-.9-1.4-.17-.4-.37-1-.42-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.05-1.2.25-1.8.42-2.2.22-.6.48-1 .9-1.4.4-.42.8-.68 1.4-.9.4-.17 1-.37 2.2-.42C8.4 2.2 8.8 2.2 12 2.2zm0 3.1A6.7 6.7 0 1018.7 12 6.7 6.7 0 0012 5.3zm0 11a4.3 4.3 0 114.3-4.3 4.3 4.3 0 01-4.3 4.3zm6.9-11.3a1.6 1.6 0 11-1.6-1.6 1.6 1.6 0 011.6 1.6z"/></svg>
@@ -463,6 +478,10 @@ const I18N = {
     place: "Vilnius, Lithuania",
     lede: "I am writing The Reserve, a book on exercise physiology for longevity. I also photograph travel and wildlife, play chess and train for endurance and strength. By profession I work in medical technology.",
     "about.h": "About",
+    "edu.h": "Education",
+    "edu.msc": "MSc, Environmental and Chemical Physics",
+    "edu.bsc": "BSc, Computational Physics",
+    "edu.uni": "Vilnius University",
     "about.lead": "I studied physics at Vilnius University, first computational physics and then a master's in environmental and chemical physics. For more than ten years I have worked in medical technology, on the information systems that hospitals and laboratories depend on.",
     "book.h": "Book",
     "book.status": "in progress",
@@ -475,8 +494,9 @@ const I18N = {
     "sport.h": "Sport",
     "sport.lead": "Endurance and strength training in the same week, all year round. I have finished several international marathons.",
     "trainer.h": "Personal trainer",
-    "trainer.licence": "licence · 2022",
-    "trainer.lead": "Personal trainer B licence from Aeromix in Vilnius. I combine endurance and strength work, and I try every method on myself before recommending it.",
+    "trainer.licence": "licence · Aeromix, 2022",
+    "trainer.lead": "Training plans that build strength and endurance together, based on the research behind my book. For adults who want to stay strong, fit and independent for decades. Every method I recommend, I have tested on myself first.",
+    "trainer.cta": "Ask about training",
     "contact.h": "Contact",
     "foot.built": "Vilnius, Lithuania"
   },
@@ -486,6 +506,10 @@ const I18N = {
     place: "Vilnius, Lietuva",
     lede: "Rašau knygą „The Reserve“ apie fizinio krūvio fiziologiją ir ilgaamžiškumą. Taip pat fotografuoju keliones ir laukinę gamtą, žaidžiu šachmatais, treniruoju ištvermę ir jėgą. Pagal profesiją dirbu medicinos technologijų srityje.",
     "about.h": "Apie",
+    "edu.h": "Išsilavinimas",
+    "edu.msc": "Aplinkos ir cheminė fizika, magistras",
+    "edu.bsc": "Kompiuterinė fizika, bakalauras",
+    "edu.uni": "Vilniaus universitetas",
     "about.lead": "Studijavau fiziką Vilniaus universitete: bakalauro studijose kompiuterinę fiziką, magistrantūroje aplinkos ir cheminę fiziką. Daugiau nei dešimt metų dirbu medicinos technologijų srityje su informacinėmis sistemomis, kuriomis remiasi ligoninės ir laboratorijos.",
     "book.h": "Knyga",
     "book.status": "rašoma",
@@ -498,8 +522,9 @@ const I18N = {
     "sport.h": "Sportas",
     "sport.lead": "Ištvermės ir jėgos treniruotės tą pačią savaitę, ištisus metus. Esu įveikęs keletą tarptautinių maratonų.",
     "trainer.h": "Asmeninis treneris",
-    "trainer.licence": "licencija · 2022",
-    "trainer.lead": "Asmeninio trenerio B licencija, įgyta Aeromix mokykloje Vilniuje. Derinu ištvermės ir jėgos treniruotes, o kiekvieną metodą pirmiausia išbandau pats.",
+    "trainer.licence": "licencija · Aeromix, 2022",
+    "trainer.lead": "Treniruočių planai, kuriuose jėga ir ištvermė lavinamos kartu, remiantis tais pačiais tyrimais kaip ir mano knyga. Suaugusiems, kurie nori išlikti stiprūs, žvalūs ir savarankiški dar daugelį metų. Kiekvieną metodą, kurį rekomenduoju, pirmiausia išbandžiau pats.",
+    "trainer.cta": "Klausti dėl treniruočių",
     "contact.h": "Kontaktai",
     "foot.built": "Vilnius, Lietuva"
   },
@@ -509,6 +534,10 @@ const I18N = {
     place: "Vilna, Lituania",
     lede: "Estoy escribiendo The Reserve, un libro sobre fisiología del ejercicio y longevidad. También fotografío viajes y fauna, juego al ajedrez y entreno resistencia y fuerza. Profesionalmente trabajo en tecnología médica.",
     "about.h": "Sobre mí",
+    "edu.h": "Formación",
+    "edu.msc": "Máster en Física Ambiental y Química",
+    "edu.bsc": "Grado en Física Computacional",
+    "edu.uni": "Universidad de Vilna",
     "about.lead": "Estudié física en la Universidad de Vilna: primero el grado en Física Computacional y después un máster en Física Ambiental y Química. Desde hace más de diez años trabajo en tecnología médica, con los sistemas de información de los que dependen hospitales y laboratorios.",
     "book.h": "Libro",
     "book.status": "en curso",
@@ -521,8 +550,9 @@ const I18N = {
     "sport.h": "Deporte",
     "sport.lead": "Entrenamiento de resistencia y fuerza en la misma semana, durante todo el año. He terminado varios maratones internacionales.",
     "trainer.h": "Entrenador personal",
-    "trainer.licence": "licencia · 2022",
-    "trainer.lead": "Licencia B de entrenador personal obtenida en Aeromix, en Vilna. Combino el trabajo de resistencia y de fuerza, y pruebo cada método en mí mismo antes de recomendarlo.",
+    "trainer.licence": "licencia · Aeromix, 2022",
+    "trainer.lead": "Planes de entrenamiento que desarrollan fuerza y resistencia a la vez, basados en la misma investigación que mi libro. Para adultos que quieren mantenerse fuertes, en forma e independientes durante décadas. Cada método que recomiendo lo he probado antes en mí mismo.",
+    "trainer.cta": "Consultar sobre entrenamiento",
     "contact.h": "Contacto",
     "foot.built": "Vilna, Lituania"
   },
@@ -532,6 +562,10 @@ const I18N = {
     place: "Vilnius, Litauen",
     lede: "Ich schreibe The Reserve, ein Buch über Trainingsphysiologie und Langlebigkeit. Außerdem fotografiere ich Reisen und Wildtiere, spiele Schach und trainiere Ausdauer und Kraft. Beruflich arbeite ich in der Medizintechnik.",
     "about.h": "Über mich",
+    "edu.h": "Ausbildung",
+    "edu.msc": "M.Sc. Umwelt- und Chemiephysik",
+    "edu.bsc": "B.Sc. Computerphysik",
+    "edu.uni": "Universität Vilnius",
     "about.lead": "Ich habe an der Universität Vilnius Physik studiert, zuerst Computerphysik (B.Sc.) und danach Umwelt- und Chemiephysik (M.Sc.). Seit mehr als zehn Jahren arbeite ich in der Medizintechnik, an den Informationssystemen, auf die Kliniken und Labore angewiesen sind.",
     "book.h": "Buch",
     "book.status": "in Arbeit",
@@ -544,8 +578,9 @@ const I18N = {
     "sport.h": "Sport",
     "sport.lead": "Ausdauer- und Krafttraining in derselben Woche, das ganze Jahr über. Ich habe mehrere internationale Marathons beendet.",
     "trainer.h": "Personal Trainer",
-    "trainer.licence": "Lizenz · 2022",
-    "trainer.lead": "B-Lizenz als Personal Trainer, erworben bei Aeromix in Vilnius. Ich verbinde Ausdauer- und Krafttraining und probiere jede Methode zuerst an mir selbst aus, bevor ich sie empfehle.",
+    "trainer.licence": "Lizenz · Aeromix, 2022",
+    "trainer.lead": "Trainingspläne, die Kraft und Ausdauer gemeinsam aufbauen, gestützt auf dieselbe Forschung wie mein Buch. Für Erwachsene, die über Jahrzehnte stark, fit und selbstständig bleiben wollen. Jede Methode, die ich empfehle, habe ich zuerst an mir selbst getestet.",
+    "trainer.cta": "Training anfragen",
     "contact.h": "Kontakt",
     "foot.built": "Vilnius, Litauen"
   },
@@ -555,6 +590,10 @@ const I18N = {
     place: "Vilnius, Lituanie",
     lede: "J'écris The Reserve, un livre sur la physiologie de l'exercice et la longévité. Je photographie aussi les voyages et la faune, je joue aux échecs et je m'entraîne en endurance et en force. Professionnellement, je travaille dans les technologies médicales.",
     "about.h": "À propos",
+    "edu.h": "Formation",
+    "edu.msc": "Master, physique de l'environnement et chimique",
+    "edu.bsc": "Licence, physique computationnelle",
+    "edu.uni": "Université de Vilnius",
     "about.lead": "J'ai étudié la physique à l'Université de Vilnius : une licence en physique computationnelle, puis un master en physique de l'environnement et chimique. Depuis plus de dix ans, je travaille dans les technologies médicales, sur les systèmes d'information dont dépendent les hôpitaux et les laboratoires.",
     "book.h": "Livre",
     "book.status": "en cours",
@@ -567,8 +606,9 @@ const I18N = {
     "sport.h": "Sport",
     "sport.lead": "Entraînement d'endurance et de force dans la même semaine, toute l'année. J'ai terminé plusieurs marathons internationaux.",
     "trainer.h": "Coach sportif",
-    "trainer.licence": "licence · 2022",
-    "trainer.lead": "Licence B de coach sportif obtenue chez Aeromix, à Vilnius. J'associe endurance et force, et je teste chaque méthode sur moi-même avant de la recommander.",
+    "trainer.licence": "licence · Aeromix, 2022",
+    "trainer.lead": "Des programmes d'entraînement qui développent la force et l'endurance ensemble, fondés sur les mêmes recherches que mon livre. Pour les adultes qui veulent rester forts, en forme et autonomes pendant des décennies. Chaque méthode que je recommande, je l'ai d'abord testée sur moi-même.",
+    "trainer.cta": "Me contacter pour un entraînement",
     "contact.h": "Contact",
     "foot.built": "Vilnius, Lituanie"
   }
