@@ -18,8 +18,11 @@ Asmeninis puslapis — vienas statinis HTML failas, be framework'ų, be build ž
 
 Skiltys: pirmas ekranas su portretu, „Apie" (viena pastraipa), knyga *The Reserve*,
 keturios kortelės 2×2 (fotografija, Exploring, Training Lab, asmeninis treneris) ir
-kontaktai mėlynoje juostoje. Šachmatai (reitingas 2030) paminėti „Apie" pastraipoje, atskiros
-kortelės nėra.
+kontaktai mėlynoje juostoje. Šachmatai paminėti „Apie" pastraipoje, atskiros kortelės nėra.
+„Apie" parašyta trečiuoju asmeniu. Reitingas 2030 yra **chess.com blitz** (FIDE profilis
+12813370 rodo tik neaktyvų blitz 1823), todėl tekste platforma įvardyta. „Top 2 %" yra
+atsargus skaičius: viešai cituojama, kad chess.com blitz 2000 ≈ top 1 %, bet pirminio
+chess.com šaltinio nerasta. Tikslų procentilį rodo chess.com profilio statistika.
 IT darbų sąrašas ir sertifikatai 2026-09-11 išimti — juos aprašo CV ir LinkedIn.
 
 Spalvos paimtos iš portreto: balta, žydra (`--sky-*`) ir tamsiai mėlyna (`--navy`).
@@ -27,11 +30,23 @@ Tamsios temos nėra sąmoningai. Šriftai: Inter ir Source Serif 4 (knygos pavad
 
 ## Kalbos
 
-EN · LT · ES · DE · FR. Vertimai yra `I18N` objekte `index.html` apačioje. Kalba
-parenkama iš `localStorage`, jei nėra — iš naršyklės kalbos, jei ir tos nėra — EN.
+EN · LT · ES · DE · FR. Kalba parenkama iš `localStorage`, jei nėra — iš naršyklės
+kalbos, jei ir tos nėra — EN.
 
-Teksto keitimas: susirandi raktą (pvz. `book.lead`) ir taisai visose penkiose kalbose.
-HTML'e tekstų nėra — tik `data-i18n` atributai.
+**EN tekstas yra pačiame HTML'e**, kad paieškos robotai ir lankytojai be JavaScript
+matytų turinį. JS jį perskaito įsikrovus (`I18N.en` sukuriamas iš `[data-i18n]`
+elementų, `DESC.en` — iš `meta-desc`), todėl EN laikomas tik vienoje vietoje.
+LT/ES/DE/FR vertimai yra `I18N` objekte `index.html` apačioje.
+
+Teksto keitimas: susirandi raktą (pvz. `book.lead`). EN taisai HTML'e — **visuose**
+elementuose su tuo raktu (pvz. `contact.h` yra trijose vietose, JS ima pirmą).
+Kitas kalbas taisai `I18N` objekte.
+
+Patikra, kad nieko neliko tuščio (turi grąžinti `0`):
+
+```bash
+curl -s https://tomaslebedevas.com/ | grep -c 'data-i18n="[^"]*"></'
+```
 
 ## Ką dar reikia užpildyti
 
