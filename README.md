@@ -33,7 +33,7 @@ HTML'e tekstų nėra — tik `data-i18n` atributai.
 
 ## Ką dar reikia užpildyti
 
-- YouTube nuoroda — HTML'e užkomentuota, ties `URL-TODO` (Facebook įrašytas 2026-09-11)
+- Savas domenas `tomaslebedevas.com` (žr. žemiau). Facebook ir YouTube nuorodos įrašytos 2026-09-11.
 
 Padaryta 2026-09-11: `The Reserve` aprašymas (`book.lead`, 5 kalbos) pagal rankraščio
 paantraštę; reitingas `2030` sutampa su rankraščio „About the Author"; fotografijos nuorodos
