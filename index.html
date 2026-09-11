@@ -39,6 +39,7 @@
     "https://www.instagram.com/tom.lebedev_photo/",
     "https://www.instagram.com/tom.lebedev15/",
     "https://www.instagram.com/tom.lebedev_sports/",
+    "https://www.instagram.com/tom.lebedev_exploring/",
     "https://www.facebook.com/lebedevas",
     "https://www.youtube.com/@TomasLebedevas-15"
   ]
@@ -307,7 +308,7 @@ footer{background:var(--white)}
       <a href="#about" data-i18n="about.h"></a>
       <a href="#book" data-i18n="book.h"></a>
       <a href="#photography" data-i18n="photo.h"></a>
-      <a href="#chess" data-i18n="chess.h"></a>
+      <a href="#exploring" data-i18n="explore.h"></a>
       <a href="#sport" data-i18n="sport.h"></a>
       <a href="#contact" data-i18n="contact.h"></a>
     </nav>
@@ -412,11 +413,16 @@ footer{background:var(--white)}
         </div>
       </article>
 
-      <article class="card" id="chess">
-        <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5a3.2 3.2 0 00-1.9 5.8C8.7 9 7.8 10.2 7.8 11.8h2.4L8.8 18h6.4l-1.4-6.2h2.4c0-1.6-.9-2.8-2.3-3.5A3.2 3.2 0 0012 2.5zM6 19.5h12V22H6z"/></svg></div>
-        <h2 data-i18n="chess.h"></h2>
-        <div class="stat"><b>2030</b><span data-i18n="chess.rating"></span></div>
-        <p data-i18n="chess.lead"></p>
+      <article class="card" id="exploring">
+        <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.5 3a2.5 2.5 0 110 5 2.5 2.5 0 010-5zM1.5 21l7-12 4.6 7.6 2.6-3.9L22.5 21h-21z"/></svg></div>
+        <h2 data-i18n="explore.h"></h2>
+        <p data-i18n="explore.lead"></p>
+        <div class="links">
+          <a class="btn btn-sm" href="https://www.instagram.com/tom.lebedev_exploring/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.05 1.8.25 2.2.42.6.22 1 .48 1.4.9.42.4.68.8.9 1.4.17.4.37 1 .42 2.2.06 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.05 1.2-.25 1.8-.42 2.2-.22.6-.48 1-.9 1.4-.4.42-.8.68-1.4.9-.4.17-1 .37-2.2.42-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.05-1.8-.25-2.2-.42-.6-.22-1-.48-1.4-.9-.42-.4-.68-.8-.9-1.4-.17-.4-.37-1-.42-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.05-1.2.25-1.8.42-2.2.22-.6.48-1 .9-1.4.4-.42.8-.68 1.4-.9.4-.17 1-.37 2.2-.42C8.4 2.2 8.8 2.2 12 2.2zm0 3.1A6.7 6.7 0 1018.7 12 6.7 6.7 0 0012 5.3zm0 11a4.3 4.3 0 114.3-4.3 4.3 4.3 0 01-4.3 4.3zm6.9-11.3a1.6 1.6 0 11-1.6-1.6 1.6 1.6 0 011.6 1.6z"/></svg>
+            <span>@tom.lebedev_exploring</span>
+          </a>
+        </div>
       </article>
 
       <article class="card" id="sport">
@@ -500,15 +506,14 @@ const I18N = {
     "edu.msc": "MSc, Environmental and Chemical Physics",
     "edu.bsc": "BSc, Computational Physics",
     "edu.uni": "Vilnius University",
-    "about.lead": "I studied physics at Vilnius University, first computational physics and then a master's in environmental and chemical physics. For more than ten years I have worked in medical technology, on the information systems that hospitals and laboratories depend on.",
+    "about.lead": "I studied physics at Vilnius University, first computational physics and then a master's in environmental and chemical physics. For more than ten years I have worked in medical technology, on the information systems that hospitals and laboratories depend on. I also play chess regularly, with a rating of 2030.",
     "book.h": "Book",
     "book.status": "in progress",
     "book.lead": "Exercise physiology for longevity. The book looks at six physiological reserves (aerobic capacity, strength, power, bone, balance and metabolism), how each of them declines with age, and what training can do about it. Working manuscript, 15 chapters.",
     "photo.h": "Photography",
     "photo.lead": "Travel, wildlife and street photography. Work from Morocco, Tanzania, Italy, the United States and beyond.",
-    "chess.h": "Chess",
-    "chess.rating": "rating",
-    "chess.lead": "I play regularly.",
+    "explore.h": "Travel & Sport",
+    "explore.lead": "Videos where travel and sport come together. Short clips on Instagram, longer films on YouTube.",
     "sport.h": "Sport",
     "sport.lead": "Endurance and strength training in the same week, all year round. I have finished several international marathons.",
     "trainer.h": "Personal trainer",
@@ -530,15 +535,14 @@ const I18N = {
     "edu.msc": "Aplinkos ir cheminė fizika, magistras",
     "edu.bsc": "Kompiuterinė fizika, bakalauras",
     "edu.uni": "Vilniaus universitetas",
-    "about.lead": "Studijavau fiziką Vilniaus universitete: bakalauro studijose kompiuterinę fiziką, magistrantūroje aplinkos ir cheminę fiziką. Daugiau nei dešimt metų dirbu medicinos technologijų srityje su informacinėmis sistemomis, kuriomis remiasi ligoninės ir laboratorijos.",
+    "about.lead": "Studijavau fiziką Vilniaus universitete: bakalauro studijose kompiuterinę fiziką, magistrantūroje aplinkos ir cheminę fiziką. Daugiau nei dešimt metų dirbu medicinos technologijų srityje su informacinėmis sistemomis, kuriomis remiasi ligoninės ir laboratorijos. Taip pat reguliariai žaidžiu šachmatais, mano reitingas 2030.",
     "book.h": "Knyga",
     "book.status": "rašoma",
     "book.lead": "Fizinio krūvio fiziologija ilgaamžiškumui. Knygoje nagrinėju šešis organizmo rezervus (aerobinį pajėgumą, jėgą, galią, kaulus, pusiausvyrą ir medžiagų apykaitą), kaip kiekvienas jų mažėja su amžiumi ir ką su tuo gali padaryti treniruotės. Rankraštis, 15 skyrių.",
     "photo.h": "Fotografija",
     "photo.lead": "Kelionių, laukinės gamtos ir gatvės fotografija. Darbai iš Maroko, Tanzanijos, Italijos, JAV ir kitur.",
-    "chess.h": "Šachmatai",
-    "chess.rating": "reitingas",
-    "chess.lead": "Žaidžiu reguliariai.",
+    "explore.h": "Kelionės ir sportas",
+    "explore.lead": "Vaizdo įrašai, kuriuose kelionės susijungia su sportu. Trumpi klipai Instagram, ilgesni filmai YouTube.",
     "sport.h": "Sportas",
     "sport.lead": "Ištvermės ir jėgos treniruotės tą pačią savaitę, ištisus metus. Esu įveikęs keletą tarptautinių maratonų.",
     "trainer.h": "Asmeninis treneris",
@@ -560,15 +564,14 @@ const I18N = {
     "edu.msc": "Máster en Física Ambiental y Química",
     "edu.bsc": "Grado en Física Computacional",
     "edu.uni": "Universidad de Vilna",
-    "about.lead": "Estudié física en la Universidad de Vilna: primero el grado en Física Computacional y después un máster en Física Ambiental y Química. Desde hace más de diez años trabajo en tecnología médica, con los sistemas de información de los que dependen hospitales y laboratorios.",
+    "about.lead": "Estudié física en la Universidad de Vilna: primero el grado en Física Computacional y después un máster en Física Ambiental y Química. Desde hace más de diez años trabajo en tecnología médica, con los sistemas de información de los que dependen hospitales y laboratorios. También juego al ajedrez con regularidad, con un elo de 2030.",
     "book.h": "Libro",
     "book.status": "en curso",
     "book.lead": "Fisiología del ejercicio para la longevidad. El libro analiza seis reservas fisiológicas (capacidad aeróbica, fuerza, potencia, hueso, equilibrio y metabolismo), cómo disminuye cada una con la edad y qué puede hacer el entrenamiento al respecto. Manuscrito en curso, 15 capítulos.",
     "photo.h": "Fotografía",
     "photo.lead": "Fotografía de viajes, naturaleza y calle. Trabajos de Marruecos, Tanzania, Italia, Estados Unidos y otros lugares.",
-    "chess.h": "Ajedrez",
-    "chess.rating": "elo",
-    "chess.lead": "Juego con regularidad.",
+    "explore.h": "Viajes y deporte",
+    "explore.lead": "Vídeos en los que el viaje y el deporte se unen. Clips cortos en Instagram, películas más largas en YouTube.",
     "sport.h": "Deporte",
     "sport.lead": "Entrenamiento de resistencia y fuerza en la misma semana, durante todo el año. He terminado varios maratones internacionales.",
     "trainer.h": "Entrenador personal",
@@ -590,15 +593,14 @@ const I18N = {
     "edu.msc": "M.Sc. Umwelt- und Chemiephysik",
     "edu.bsc": "B.Sc. Computerphysik",
     "edu.uni": "Universität Vilnius",
-    "about.lead": "Ich habe an der Universität Vilnius Physik studiert, zuerst Computerphysik (B.Sc.) und danach Umwelt- und Chemiephysik (M.Sc.). Seit mehr als zehn Jahren arbeite ich in der Medizintechnik, an den Informationssystemen, auf die Kliniken und Labore angewiesen sind.",
+    "about.lead": "Ich habe an der Universität Vilnius Physik studiert, zuerst Computerphysik (B.Sc.) und danach Umwelt- und Chemiephysik (M.Sc.). Seit mehr als zehn Jahren arbeite ich in der Medizintechnik, an den Informationssystemen, auf die Kliniken und Labore angewiesen sind. Außerdem spiele ich regelmäßig Schach, meine Wertung liegt bei 2030.",
     "book.h": "Buch",
     "book.status": "in Arbeit",
     "book.lead": "Trainingsphysiologie für ein langes Leben. Das Buch behandelt sechs physiologische Reserven (aerobe Kapazität, Kraft, Schnellkraft, Knochen, Gleichgewicht und Stoffwechsel), wie jede davon mit dem Alter abnimmt und was Training dagegen tun kann. Manuskript, 15 Kapitel.",
     "photo.h": "Fotografie",
     "photo.lead": "Reise-, Wildlife- und Straßenfotografie. Arbeiten aus Marokko, Tansania, Italien, den USA und anderswo.",
-    "chess.h": "Schach",
-    "chess.rating": "Wertung",
-    "chess.lead": "Ich spiele regelmäßig.",
+    "explore.h": "Reisen & Sport",
+    "explore.lead": "Videos, in denen Reisen und Sport zusammenkommen. Kurze Clips auf Instagram, längere Filme auf YouTube.",
     "sport.h": "Sport",
     "sport.lead": "Ausdauer- und Krafttraining in derselben Woche, das ganze Jahr über. Ich habe mehrere internationale Marathons beendet.",
     "trainer.h": "Personal Trainer",
@@ -620,15 +622,14 @@ const I18N = {
     "edu.msc": "Master, physique de l'environnement et chimique",
     "edu.bsc": "Licence, physique computationnelle",
     "edu.uni": "Université de Vilnius",
-    "about.lead": "J'ai étudié la physique à l'Université de Vilnius : une licence en physique computationnelle, puis un master en physique de l'environnement et chimique. Depuis plus de dix ans, je travaille dans les technologies médicales, sur les systèmes d'information dont dépendent les hôpitaux et les laboratoires.",
+    "about.lead": "J'ai étudié la physique à l'Université de Vilnius : une licence en physique computationnelle, puis un master en physique de l'environnement et chimique. Depuis plus de dix ans, je travaille dans les technologies médicales, sur les systèmes d'information dont dépendent les hôpitaux et les laboratoires. Je joue aussi régulièrement aux échecs, avec un classement de 2030.",
     "book.h": "Livre",
     "book.status": "en cours",
     "book.lead": "Physiologie de l'exercice pour la longévité. Le livre étudie six réserves physiologiques (capacité aérobie, force, puissance, os, équilibre et métabolisme), la façon dont chacune diminue avec l'âge et ce que l'entraînement peut y faire. Manuscrit en cours, 15 chapitres.",
     "photo.h": "Photographie",
     "photo.lead": "Photographie de voyage, animalière et de rue. Travaux réalisés au Maroc, en Tanzanie, en Italie, aux États-Unis et ailleurs.",
-    "chess.h": "Échecs",
-    "chess.rating": "classement",
-    "chess.lead": "Je joue régulièrement.",
+    "explore.h": "Voyages et sport",
+    "explore.lead": "Des vidéos où le voyage et le sport se rejoignent. Des clips courts sur Instagram, des films plus longs sur YouTube.",
     "sport.h": "Sport",
     "sport.lead": "Entraînement d'endurance et de force dans la même semaine, toute l'année. J'ai terminé plusieurs marathons internationaux.",
     "trainer.h": "Coach sportif",

@@ -17,8 +17,9 @@ Asmeninis puslapis — vienas statinis HTML failas, be framework'ų, be build ž
 ## Turinys ir dizainas
 
 Skiltys: pirmas ekranas su portretu, „Apie" (viena pastraipa), knyga *The Reserve*,
-keturios kortelės 2×2 (fotografija, šachmatai, sportas, asmeninis treneris) ir kontaktai
-mėlynoje juostoje.
+keturios kortelės 2×2 (fotografija, kelionės ir sportas, sportas, asmeninis treneris) ir
+kontaktai mėlynoje juostoje. Šachmatai (reitingas 2030) paminėti „Apie" pastraipoje, atskiros
+kortelės nėra.
 IT darbų sąrašas ir sertifikatai 2026-09-11 išimti — juos aprašo CV ir LinkedIn.
 
 Spalvos paimtos iš portreto: balta, žydra (`--sky-*`) ir tamsiai mėlyna (`--navy`).
