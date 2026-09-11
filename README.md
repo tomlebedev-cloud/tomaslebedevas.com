@@ -33,24 +33,24 @@ HTML'e tekstų nėra — tik `data-i18n` atributai.
 
 ## Ką dar reikia užpildyti
 
-- YouTube ir Facebook nuorodos — HTML'e užkomentuotos, ties `URL-TODO`
+- YouTube nuoroda — HTML'e užkomentuota, ties `URL-TODO` (Facebook įrašytas 2026-09-11)
 
 Padaryta 2026-09-11: `The Reserve` aprašymas (`book.lead`, 5 kalbos) pagal rankraščio
 paantraštę; reitingas `2030` sutampa su rankraščio „About the Author"; fotografijos nuorodos
 nukreiptos į `tomaslebedevas.photography`; pridėti `canonical`, `og:url` ir pilnas `og:image` adresas.
 
-## Deploy į GitHub Pages
+## GitHub Pages
 
-```bash
-git init
-git add .
-git commit -m "Personal site"
-git branch -M main
-git remote add origin https://github.com/tomlebedev-cloud/tomaslebedevas.com.git
-git push -u origin main
-```
+Repozitorija: https://github.com/tomlebedev-cloud/tomaslebedevas.com (vieša, sukurta 2026-09-11).
+Pages šaltinis: `main` / root. Atnaujinimas — `git push`, puslapis persigeneruoja per ~1 min.
 
-Tada repo Settings → Pages → Source: `main` / `root`.
+Kol savo domeno nėra, puslapis veikia adresu
+https://tomaslebedevas.photography/tomaslebedevas.com/ — GitHub nukreipia per fotografijos
+domeną, nes vartotojo puslapis `tomlebedev-cloud.github.io` turi savą domeną. Nuorodos
+niekam nesiųsti, kol neprijungtas `tomaslebedevas.com`.
+
+Pirmas variantas su IT darbų sąrašu yra tik vietinėje šakoje `pirmas-variantas-2026-09-10`
+— į GitHub jos nekelti.
 
 ### Savas domenas
 
