@@ -9,7 +9,8 @@ Asmeninis puslapis — vienas statinis HTML failas, be framework'ų, be build ž
 | `index.html` | Visas puslapis: turinys, CSS ir 5 kalbų vertimai viename faile |
 | `img/tomas-lebedevas.jpg` | Portretas, originalas (745×951), naudojamas kaip 2x |
 | `img/tomas-lebedevas-portrait-480.jpg` | Portretas 4:5 (480×600) pirmam ekranui |
-| `img/tomas-lebedevas-800.jpg` | Kvadratinis, nuorodų peržiūrai (`og:image`) |
+| `img/tomas-lebedevas-800.jpg` | Kvadratinis portretas (atsarginis) |
+| `img/og-image.jpg` | Nuorodos peržiūra dalinantis (`og:image`, 1200×630) — portretas, vardas, domenas |
 | `robots.txt` | Leidžia indeksuoti, nurodo sitemap |
 | `sitemap.xml` | Vienas įrašas — pagrindinis puslapis |
 
