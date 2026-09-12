@@ -26,6 +26,8 @@ chess.com šaltinio nerasta. Tikslų procentilį rodo chess.com profilio statist
 IT darbų sąrašas ir sertifikatai 2026-09-11 išimti — juos aprašo CV ir LinkedIn.
 
 Spalvos paimtos iš portreto: balta, žydra (`--sky-*`) ir tamsiai mėlyna (`--navy`).
+Nuo 2026-09-12 pridėti smėlio tonai (`--sand-*`, `#F2EBDD` / `#E3D8C3` — tie patys kaip
+fotografijos puslapyje): pirmo ekrano apačia, figūra už portreto, knygos skiltis ir poraštė.
 Tamsios temos nėra sąmoningai. Šriftai: Inter ir Source Serif 4 (knygos pavadinimui).
 
 ## Kalbos
