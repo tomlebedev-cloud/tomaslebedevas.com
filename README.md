@@ -6,7 +6,7 @@ Asmeninis puslapis — vienas statinis HTML failas, be framework'ų, be build ž
 
 | Failas | Paskirtis |
 |---|---|
-| `index.html` | Visas puslapis: turinys, CSS ir 5 kalbų vertimai viename faile |
+| `index.html` | Visas puslapis: turinys, CSS ir 4 kalbų vertimai viename faile |
 | `img/tomas-lebedevas.jpg` | Portretas, originalas (745×951), naudojamas kaip 2x |
 | `img/tomas-lebedevas-portrait-480.jpg` | Portretas 4:5 (480×600) pirmam ekranui |
 | `img/tomas-lebedevas-800.jpg` | Kvadratinis portretas (atsarginis) |
@@ -32,13 +32,14 @@ Tamsios temos nėra sąmoningai. Šriftai: Inter ir Source Serif 4 (knygos pavad
 
 ## Kalbos
 
-EN · LT · ES · DE · FR. Kalba parenkama iš `localStorage`, jei nėra — iš naršyklės
+EN · ES · DE · FR. LT kol kas išimta (2026-09-15, Tomo prašymu); vertimą galima atgauti iš
+git istorijos (commit'as prieš LT išėmimą). Kalba parenkama iš `localStorage`, jei nėra — iš naršyklės
 kalbos, jei ir tos nėra — EN.
 
 **EN tekstas yra pačiame HTML'e**, kad paieškos robotai ir lankytojai be JavaScript
 matytų turinį. JS jį perskaito įsikrovus (`I18N.en` sukuriamas iš `[data-i18n]`
 elementų, `DESC.en` — iš `meta-desc`), todėl EN laikomas tik vienoje vietoje.
-LT/ES/DE/FR vertimai yra `I18N` objekte `index.html` apačioje.
+ES/DE/FR vertimai yra `I18N` objekte `index.html` apačioje.
 
 Teksto keitimas: susirandi raktą (pvz. `book.lead`). EN taisai HTML'e — **visuose**
 elementuose su tuo raktu (pvz. `contact.h` yra trijose vietose, JS ima pirmą).
