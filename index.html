@@ -218,6 +218,7 @@ h2::before{content:"";display:block;width:38px;height:3px;border-radius:3px;back
   color:var(--blue-700);background:var(--sand-100);border-radius:999px;padding:6px 12px;
 }
 .book p{margin:0;font-size:18px;line-height:1.75;color:var(--ink)}
+.book-cta{margin-top:24px}
 
 /* interest cards */
 .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
@@ -397,7 +398,13 @@ footer{background:var(--sand-50);border-top:1px solid var(--sand-rule)}
             <h3>The Reserve</h3>
             <span class="badge" data-i18n="book.status">in progress</span>
           </div>
-          <p data-i18n="book.lead">Exercise physiology for longevity. The book looks at six physiological reserves (aerobic capacity, strength, power, bone, balance and metabolism), how each of them declines with age, and what training can do about it. Working manuscript, 15 chapters.</p>
+          <p data-i18n="book.lead">Exercise physiology for longevity, written for coaches, physiotherapists and clinicians. Its starting point is that people do not lose function gradually: capacity declines smoothly, but independence goes in steps, on the day capacity falls below what an ordinary task demands. The book follows six reserves (aerobic capacity, strength, power, bone, balance and metabolism), shows where each one's threshold sits, and turns the evidence into training. All 15 chapters are in first draft.</p>
+          <div class="book-cta">
+            <a class="btn btn-sm btn-primary" href="mailto:tomas.lebedevas@icloud.com?subject=The%20Reserve">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 011 1v12a1 1 0 01-1 1H3a1 1 0 01-1-1V6a1 1 0 011-1zm1 2.3V17h16V7.3l-8 5.4-8-5.4zM5.8 7L12 11.2 18.2 7H5.8z"/></svg>
+              <span data-i18n="book.cta">Get notified when it's out</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -511,7 +518,8 @@ const I18N = {
     "about.lead": "Tomas Lebedevas estudió física en la Universidad de Vilna, donde obtuvo el grado en Física Computacional y después un máster en Física Ambiental y Química. Desde hace más de una década trabaja en tecnología médica, ocupándose de los sistemas de información de los que dependen hospitales y laboratorios. También es un gran aficionado al ajedrez: su rating blitz de 2030 en Chess.com lo sitúa en el 2 % superior de los jugadores del sitio.",
     "book.h": "Libro",
     "book.status": "en curso",
-    "book.lead": "Fisiología del ejercicio para la longevidad. El libro analiza seis reservas fisiológicas (capacidad aeróbica, fuerza, potencia, hueso, equilibrio y metabolismo), cómo disminuye cada una con la edad y qué puede hacer el entrenamiento al respecto. Manuscrito en curso, 15 capítulos.",
+    "book.lead": "Fisiología del ejercicio para la longevidad, escrito para entrenadores, fisioterapeutas y clínicos. Parte de una idea: la función no se pierde de forma gradual. La capacidad disminuye poco a poco, pero la independencia se pierde a saltos, el día en que la capacidad cae por debajo de lo que exige una tarea cotidiana. El libro recorre seis reservas (capacidad aeróbica, fuerza, potencia, hueso, equilibrio y metabolismo), muestra dónde está el umbral de cada una y convierte la evidencia en entrenamiento. Los 15 capítulos están en primer borrador.",
+    "book.cta": "Avísame cuando salga",
     "photo.h": "Fotografía",
     "photo.lead": "Fotografía de viajes, naturaleza y calle, reunida a lo largo de unos quince años de viaje. Cebras e hipopótamos en Tanzania, los callejones y el desierto de Marruecos, puertos y mercados en Italia, Estados Unidos y otros lugares. Una selección de 42 fotografías, agrupadas por lugar.",
     "explore.h": "Exploring",
@@ -540,7 +548,8 @@ const I18N = {
     "about.lead": "Tomas Lebedevas studierte Physik an der Universität Vilnius, zunächst mit einem Bachelor in Computerphysik, danach mit einem Master in Umwelt- und Chemiephysik. Seit über zehn Jahren arbeitet er in der Medizintechnik und betreut die Informationssysteme, auf die Krankenhäuser und Labore angewiesen sind. Außerdem spielt er gern Schach: Mit einer Blitz-Wertung von 2030 auf Chess.com gehört er zu den besten 2 % der Spieler dort.",
     "book.h": "Buch",
     "book.status": "in Arbeit",
-    "book.lead": "Trainingsphysiologie für ein langes Leben. Das Buch behandelt sechs physiologische Reserven (aerobe Kapazität, Kraft, Schnellkraft, Knochen, Gleichgewicht und Stoffwechsel), wie jede davon mit dem Alter abnimmt und was Training dagegen tun kann. Manuskript, 15 Kapitel.",
+    "book.lead": "Trainingsphysiologie für ein langes Leben, geschrieben für Trainer, Physiotherapeuten und Ärzte. Ausgangspunkt ist, dass Funktion nicht allmählich verloren geht: Die Leistungsfähigkeit nimmt gleichmäßig ab, die Selbstständigkeit aber in Stufen, an dem Tag, an dem sie unter die Anforderung einer alltäglichen Aufgabe fällt. Das Buch folgt sechs Reserven (aerobe Kapazität, Kraft, Schnellkraft, Knochen, Gleichgewicht und Stoffwechsel), zeigt, wo die Schwelle jeder einzelnen liegt, und übersetzt die Evidenz in Training. Alle 15 Kapitel liegen im ersten Entwurf vor.",
+    "book.cta": "Benachrichtigen, wenn es erscheint",
     "photo.h": "Fotografie",
     "photo.lead": "Reise-, Wildlife- und Straßenfotografie aus rund fünfzehn Jahren unterwegs. Zebras und Flusspferde in Tansania, Gassen und Wüste in Marokko, Häfen und Märkte in Italien, den USA und anderswo. Eine Auswahl von 42 Fotografien, nach Orten geordnet.",
     "explore.h": "Exploring",
@@ -569,7 +578,8 @@ const I18N = {
     "about.lead": "Tomas Lebedevas a étudié la physique à l'Université de Vilnius, avec une licence en physique computationnelle puis un master en physique de l'environnement et physique chimique. Depuis plus de dix ans, il travaille dans les technologies médicales et s'occupe des systèmes d'information dont dépendent les hôpitaux et les laboratoires. Il joue aussi volontiers aux échecs : son classement blitz de 2030 sur Chess.com le place parmi les 2 % des meilleurs joueurs du site.",
     "book.h": "Livre",
     "book.status": "en cours",
-    "book.lead": "Physiologie de l'exercice pour la longévité. Le livre étudie six réserves physiologiques (capacité aérobie, force, puissance, os, équilibre et métabolisme), la façon dont chacune diminue avec l'âge et ce que l'entraînement peut y faire. Manuscrit en cours, 15 chapitres.",
+    "book.lead": "Physiologie de l'exercice pour la longévité, écrit pour les coachs, les kinésithérapeutes et les cliniciens. Son point de départ : on ne perd pas ses fonctions progressivement. Les capacités déclinent de façon continue, mais l'autonomie se perd par paliers, le jour où la capacité passe sous l'exigence d'une tâche ordinaire. Le livre suit six réserves (capacité aérobie, force, puissance, os, équilibre et métabolisme), montre où se situe le seuil de chacune et traduit les données en entraînement. Les 15 chapitres existent en premier jet.",
+    "book.cta": "Être prévenu de la parution",
     "photo.h": "Photographie",
     "photo.lead": "Photographie de voyage, animalière et de rue, réunie au fil d'une quinzaine d'années sur la route. Zèbres et hippopotames en Tanzanie, ruelles et désert au Maroc, ports et marchés en Italie, aux États-Unis et ailleurs. Une sélection de 42 photographies, classées par lieu.",
     "explore.h": "Exploring",
