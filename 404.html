@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found · Tomas Lebedevas</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light">
+<!-- Absolute paths: GitHub Pages serves this file for any missing URL, at any depth. -->
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --white:#FFFFFF;
+  --sky-50:#F4F9FD;
+  --blue-600:#226DAE;
+  --blue-700:#1D5F99;
+  --navy:#0F2A44;
+  --ink:#24313D;
+  --muted:#5A6B7B;
+  --rule:#DDE8F1;
+  --sand-50:#FBF7EF;
+  --sans:"Inter","Segoe UI",system-ui,-apple-system,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;display:flex;flex-direction:column;
+  background:linear-gradient(180deg,var(--white) 0%,var(--sky-50) 55%,var(--sand-50) 100%);
+  color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+a:focus-visible{outline:3px solid var(--blue-600);outline-offset:2px;border-radius:8px}
+header{border-bottom:1px solid var(--rule);background:rgba(255,255,255,.92)}
+.bar{max-width:1100px;margin:0 auto;padding:0 32px;height:64px;display:flex;align-items:center}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--navy);font-weight:600;font-size:15.5px}
+.mono{
+  width:34px;height:34px;border-radius:9px;display:grid;place-items:center;
+  background:linear-gradient(145deg,#2F80C4,var(--blue-700));
+  color:#fff;font-size:12.5px;font-weight:700;letter-spacing:.05em;
+}
+main{flex:1;display:grid;place-items:center;padding:64px 20px}
+.box{max-width:520px;text-align:center}
+.code{margin:0 0 6px;font-size:13px;font-weight:600;letter-spacing:.18em;color:var(--blue-600)}
+h1{margin:0 0 14px;font-size:clamp(30px,6vw,40px);line-height:1.1;letter-spacing:-.02em;color:var(--navy)}
+p{margin:0 0 28px;color:var(--muted)}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:10px 20px;
+  border-radius:10px;background:var(--blue-600);color:#fff;
+  font-weight:600;font-size:15px;text-decoration:none;
+}
+.btn:hover{background:var(--blue-700)}
+.btn svg{width:16px;height:16px;fill:currentColor}
+@media (max-width:660px){ .bar{padding:0 20px} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <a class="brand" href="/"><span class="mono" aria-hidden="true">TL</span><span>Tomas Lebedevas</span></a>
+  </div>
+</header>
+
+<main>
+  <div class="box">
+    <p class="code">404</p>
+    <h1>This page doesn't exist</h1>
+    <p>The link may be old or mistyped. Everything is on the main page: the book, training, photography and contact.</p>
+    <a class="btn" href="/">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.8 5.3L4.1 12l6.7 6.7 1.4-1.4L7.9 13H20v-2H7.9l4.3-4.3z"/></svg>
+      tomaslebedevas.com
+    </a>
+  </div>
+</main>
+
+</body>
+</html>

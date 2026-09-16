@@ -77,7 +77,8 @@ body{
 }
 img{max-width:100%}
 a{color:var(--blue-700)}
-a:focus-visible,button:focus-visible{outline:3px solid var(--sky-300);outline-offset:2px;border-radius:8px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--blue-600);outline-offset:2px;border-radius:8px}
+.contact a:focus-visible{outline-color:#fff}
 .wrap{max-width:1100px;margin:0 auto;padding:0 32px}
 
 /* ---------- top bar ---------- */
@@ -301,6 +302,12 @@ footer{background:var(--sand-50);border-top:1px solid var(--sand-rule)}
   .brand .name{display:none}
   .langs button{padding:7px 6px}
 }
+@media (pointer:coarse){
+  /* Finger-sized targets: 44px wide, and the ::after reaches over the pill's
+     padding so the whole 44px-high switcher is tappable. */
+  .langs button{position:relative;min-width:44px;min-height:38px;padding:7px 6px}
+  .langs button::after{content:"";position:absolute;inset:-3px 0}
+}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *{transition:none!important}
@@ -355,7 +362,7 @@ footer{background:var(--sand-50);border-top:1px solid var(--sand-rule)}
 
       <div class="portrait-wrap">
         <img class="portrait" src="img/tomas-lebedevas-portrait-480.jpg"
-             srcset="img/tomas-lebedevas-portrait-480.jpg 480w, img/tomas-lebedevas.jpg 745w"
+             srcset="img/tomas-lebedevas-portrait-480.jpg 480w, img/tomas-lebedevas-portrait-745.jpg 745w"
              sizes="(max-width: 980px) 280px, 380px"
              width="480" height="600"
              alt="Tomas Lebedevas" fetchpriority="high" decoding="async">
