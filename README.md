@@ -38,8 +38,13 @@ kalbos, jei ir tos nėra — EN.
 
 **EN tekstas yra pačiame HTML'e**, kad paieškos robotai ir lankytojai be JavaScript
 matytų turinį. JS jį perskaito įsikrovus (`I18N.en` sukuriamas iš `[data-i18n]`
-elementų, `DESC.en` — iš `meta-desc`), todėl EN laikomas tik vienoje vietoje.
-ES/DE/FR vertimai yra `I18N` objekte `index.html` apačioje.
+elementų, `DESC.en` — iš `meta-desc`, `TITLES.en` — iš `<title>`), todėl EN laikomas
+tik vienoje vietoje. ES/DE/FR vertimai yra `I18N` objekte `index.html` apačioje.
+
+Kartu su kalba keičiasi ir `<title>` (`TITLES` objektas) bei `meta description`
+(`DESC` objektas) — tai, ką žmonės mato paieškos rezultatuose. Abu blokai faile eina
+vienas po kito ir abu turi `es`/`de`/`fr` raktus, tad juos redaguojant verta įsitikinti,
+kad taisomas tas blokas, kurio reikia.
 
 Teksto keitimas: susirandi raktą (pvz. `book.lead`). EN taisai HTML'e — **visuose**
 elementuose su tuo raktu (pvz. `contact.h` yra trijose vietose, JS ima pirmą).
