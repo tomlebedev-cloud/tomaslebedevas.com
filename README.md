@@ -13,6 +13,7 @@ Asmeninis puslapis — vienas statinis HTML failas, be framework'ų, be build ž
 | `img/tomas-lebedevas-portrait-745.jpg` | Tas pats originalas, perkoduotas JPEG q84 (73 KB) — 2x versija `srcset` |
 | `img/tomas-lebedevas-800.jpg` | Kvadratinis portretas (atsarginis) |
 | `img/og-image.jpg` | Nuorodos peržiūra dalinantis (`og:image`, 1200×630) — portretas, vardas, domenas |
+| `audio/tomas-lebedevas-intro.mp3` | Įgarsintas prisistatymas (Epidemic Sound, balsas Edward, 1:10, 128 kbps mono, 1,1 MB). Mygtukas „Listen" rodomas tik EN versijoje |
 | `robots.txt` | Leidžia indeksuoti, nurodo sitemap |
 | `sitemap.xml` | Vienas įrašas — pagrindinis puslapis |
 

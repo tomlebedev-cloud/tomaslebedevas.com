@@ -151,6 +151,11 @@ h1{
 .btn-primary{background:var(--blue-600);border-color:var(--blue-600);color:#fff}
 .btn-primary:hover{background:var(--blue-700);border-color:var(--blue-700)}
 .btn-sm{padding:10px 14px;font-size:14px;border-radius:9px}
+.listen[hidden]{display:none}
+.listen .i-pause{display:none}
+.listen.playing .i-play{display:none}
+.listen.playing .i-pause{display:block}
+.listen-time{font-weight:500;color:var(--muted,#5b6b7f);font-variant-numeric:tabular-nums}
 
 .portrait-wrap{position:relative;justify-self:end;width:min(100%,380px)}
 .portrait-wrap::before{
@@ -356,6 +361,13 @@ footer{background:var(--sand-50);border-top:1px solid var(--sand-rule)}
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 112.5 6 2.5 2.5 0 014.98 3.5zM3 8.98h4V21H3zM9.5 8.98h3.83v1.64h.05a4.2 4.2 0 013.78-2.08c4.04 0 4.79 2.66 4.79 6.12V21h-4v-5.5c0-1.31-.02-3-1.83-3s-2.12 1.43-2.12 2.9V21h-4z"/></svg>
             <span>LinkedIn</span>
           </a>
+          <button type="button" class="btn listen" aria-pressed="false" hidden>
+            <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.1v13.8a1 1 0 001.5.9l11-6.9a1 1 0 000-1.7l-11-6.9A1 1 0 008 5.1z"/></svg>
+            <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h3.5v16H7zM13.5 4H17v16h-3.5z"/></svg>
+            <span>Listen</span>
+            <span class="listen-time">1:10</span>
+          </button>
+          <audio id="intro-audio" src="audio/tomas-lebedevas-intro.mp3" preload="none"></audio>
         </div>
       </div>
 
@@ -642,8 +654,30 @@ function setLang(lang){
   document.querySelectorAll(".langs button").forEach(function(b){
     b.setAttribute("aria-current", String(b.dataset.lang === lang));
   });
+  // The voice-over is recorded in English only, so the button shows only there.
+  const listen = document.querySelector(".listen");
+  if (listen) {
+    listen.hidden = lang !== "en";
+    if (listen.hidden) document.getElementById("intro-audio").pause();
+  }
   try { localStorage.setItem("lang", lang); } catch (e) {}
 }
+
+(function(){
+  const btn = document.querySelector(".listen");
+  const audio = document.getElementById("intro-audio");
+  const time = btn.querySelector(".listen-time");
+  const full = time.textContent;
+  function fmt(t){ t = Math.max(0, Math.round(t)); return Math.floor(t / 60) + ":" + String(t % 60).padStart(2, "0"); }
+  function state(on){ btn.classList.toggle("playing", on); btn.setAttribute("aria-pressed", String(on)); }
+  btn.addEventListener("click", function(){ audio.paused ? audio.play() : audio.pause(); });
+  audio.addEventListener("play", function(){ state(true); });
+  audio.addEventListener("pause", function(){ state(false); });
+  audio.addEventListener("timeupdate", function(){
+    if (audio.duration) time.textContent = fmt(audio.duration - audio.currentTime);
+  });
+  audio.addEventListener("ended", function(){ audio.currentTime = 0; time.textContent = full; });
+})();
 
 function initialLang(){
   try {
