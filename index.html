@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tomas Lebedevas — author of The Reserve, trainer in Vilnius</title>
-<meta name="description" id="meta-desc" content="Tomas Lebedevas — writing The Reserve, a book on exercise physiology for longevity. Personal training for hybrid athletes and adults, in Vilnius and online.">
+<meta name="description" id="meta-desc" content="Tomas Lebedevas — author of The Reserve, a book on exercise physiology for longevity, out now on Amazon. Personal training for hybrid athletes and adults, in Vilnius and online.">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Tomas Lebedevas — author of The Reserve, trainer in Vilnius">
-<meta property="og:description" content="Tomas Lebedevas — writing The Reserve, a book on exercise physiology for longevity. Personal training for hybrid athletes and adults, in Vilnius and online.">
+<meta property="og:description" content="Tomas Lebedevas — author of The Reserve, a book on exercise physiology for longevity, out now on Amazon. Personal training for hybrid athletes and adults, in Vilnius and online.">
 <meta property="og:image" content="https://tomaslebedevas.com/img/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -42,6 +42,23 @@
     "https://www.instagram.com/tom.lebedev_exploring/",
     "https://www.facebook.com/lebedevas"
   ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "The Reserve: Exercise Physiology for Longevity",
+  "author": { "@type": "Person", "name": "Tomas Lebedevas", "url": "https://tomaslebedevas.com/" },
+  "inLanguage": "en",
+  "datePublished": "2026-09-17",
+  "numberOfPages": 277,
+  "bookFormat": "https://schema.org/Paperback",
+  "isbn": "9798174986206",
+  "image": "https://tomaslebedevas.com/img/the-reserve-cover-840.jpg",
+  "url": "https://www.amazon.com/dp/B0HKC567Q2",
+  "about": ["Exercise physiology", "Longevity", "Strength training", "Ageing"],
+  "audience": { "@type": "Audience", "audienceType": "Coaches, physiotherapists, exercise physiologists and clinicians" }
 }
 </script>
 <style>
@@ -205,17 +222,12 @@ h2::before{content:"";display:block;width:38px;height:3px;border-radius:3px;back
   background:var(--white);border:1px solid var(--sand-rule);border-radius:22px;
   padding:48px 56px 48px 48px;box-shadow:var(--shadow);
 }
-.cover{
-  aspect-ratio:2/3;border-radius:5px 12px 12px 5px;padding:24px 20px;
-  display:flex;flex-direction:column;justify-content:space-between;color:#fff;
-  background:
-    linear-gradient(90deg,rgba(255,255,255,.16) 0,rgba(255,255,255,.16) 7px,transparent 7px),
-    linear-gradient(160deg,#3A8ACD 0%,var(--blue-700) 52%,var(--navy) 100%);
-  box-shadow:0 28px 44px -24px rgba(15,42,68,.65);
-}
-.cover .ct{font-family:var(--serif);font-weight:600;font-size:28px;line-height:1.02;letter-spacing:-.01em}
-.cover .cs{font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;line-height:1.5;opacity:.85;margin-top:12px}
-.cover .ca{font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;opacity:.9}
+.cover-link{display:block;border-radius:5px 12px 12px 5px;overflow:hidden;box-shadow:0 28px 44px -24px rgba(15,42,68,.65);transition:transform .15s ease,box-shadow .15s ease}
+.cover-link:hover{transform:translateY(-2px);box-shadow:0 32px 50px -24px rgba(15,42,68,.7)}
+.cover-link img{display:block;width:100%;height:auto}
+.book-cta{display:flex;flex-wrap:wrap;gap:10px}
+.book p.book-meta{margin-top:16px;font-size:14px;line-height:1.7;color:var(--muted)}
+.book p.book-meta a{color:var(--blue-700)}
 .book-top{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:0 0 16px}
 .book h3{font-family:var(--serif);font-style:italic;font-weight:600;font-size:38px;line-height:1.1;color:var(--navy);margin:0}
 .badge{
@@ -298,6 +310,7 @@ footer{background:var(--sand-50);border-top:1px solid var(--sand-rule)}
   .lede,.about-text{font-size:17.5px}
   .cards{grid-template-columns:1fr}
   .book{grid-template-columns:1fr;gap:28px;padding:28px}
+  .cover-link{max-width:230px}
   .cover{width:150px}
   .book h3{font-size:32px}
   .portrait-tag{right:-28px;padding:10px 14px 10px 10px}
@@ -351,7 +364,7 @@ footer{background:var(--sand-50);border-top:1px solid var(--sand-rule)}
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 00-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>
           <span data-i18n="place">Vilnius, Lithuania</span>
         </p>
-        <p class="lede" data-i18n="lede">I am writing The Reserve, a book on how training builds the reserve that keeps people strong and independent as they age. I coach hybrid athletes and adults who want the same, in person in Vilnius and online. Alongside that: travel and wildlife photography, solo motorcycle journeys, and notes from my own training.</p>
+        <p class="lede" data-i18n="lede">I wrote The Reserve, a book on how training builds the reserve that keeps people strong and independent as they age; it is out now on Amazon. I coach hybrid athletes and adults who want the same, in person in Vilnius and online. Alongside that: travel and wildlife photography, solo motorcycle journeys, and notes from my own training.</p>
         <div class="actions">
           <a class="btn btn-primary" href="#contact">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 011 1v12a1 1 0 01-1 1H3a1 1 0 01-1-1V6a1 1 0 011-1zm1 2.3V17h16V7.3l-8 5.4-8-5.4zM5.8 7L12 11.2 18.2 7H5.8z"/></svg>
@@ -379,7 +392,7 @@ footer{background:var(--sand-50);border-top:1px solid var(--sand-rule)}
              alt="Tomas Lebedevas" fetchpriority="high" decoding="async">
         <a class="portrait-tag" href="#book">
           <span class="ti"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h11a2 2 0 012 2v16a2 2 0 01-2 2H6a3 3 0 01-3-3V5a3 3 0 013-3zm0 2a1 1 0 00-1 1v11.2A3 3 0 016 16h11V4H6zm0 14a1 1 0 000 2h11v-2H6zm2-11h7v2H8V7zm0 4h5v2H8v-2z"/></svg></span>
-          <span><b>The Reserve</b><span data-i18n="book.status">first draft</span></span>
+          <span><b>The Reserve</b><span data-i18n="book.status">out now</span></span>
         </a>
       </div>
     </div>
@@ -404,25 +417,30 @@ footer{background:var(--sand-50);border-top:1px solid var(--sand-rule)}
     <div class="wrap">
       <h2 data-i18n="book.h">Book</h2>
       <div class="book">
-        <div class="cover" aria-hidden="true">
-          <div>
-            <div class="ct">The Reserve</div>
-            <div class="cs">Exercise Physiology<br>for Longevity</div>
-          </div>
-          <div class="ca">Tomas Lebedevas</div>
-        </div>
+        <a class="cover-link" href="https://www.amazon.com/dp/B0HKC567Q2" target="_blank" rel="noopener"
+           aria-label="The Reserve on Amazon">
+          <img src="img/the-reserve-cover-420.jpg"
+               srcset="img/the-reserve-cover-420.jpg 420w, img/the-reserve-cover-840.jpg 840w"
+               sizes="(max-width: 760px) 220px, 210px" width="420" height="630"
+               alt="The Reserve: Exercise Physiology for Longevity — book cover"
+               loading="lazy" decoding="async">
+        </a>
         <div>
           <div class="book-top">
             <h3>The Reserve</h3>
-            <span class="badge" data-i18n="book.status">first draft</span>
+            <span class="badge" data-i18n="book.status">out now</span>
           </div>
-          <p data-i18n="book.lead">Exercise physiology for longevity, written for coaches, physiotherapists and clinicians. Its starting point is that people do not lose function gradually: capacity declines smoothly, but independence goes in steps, on the day capacity falls below what an ordinary task demands. The book follows six reserves (aerobic capacity, strength, power, bone, balance and metabolism), shows where each one's threshold sits, and turns the evidence into training. All 15 chapters are in first draft.</p>
+          <p data-i18n="book.lead">Exercise physiology for longevity, written for coaches, physiotherapists and clinicians. Its starting point is that people do not lose function gradually: capacity declines smoothly, but independence goes in steps, on the day capacity falls below what an ordinary task demands. The book follows six reserves (aerobic capacity, strength, power, bone, balance and metabolism), shows where each one's threshold sits, and turns the evidence into training. Every effect size is sourced and graded: verified, probable or untraced.</p>
           <div class="book-cta">
-            <a class="btn btn-sm btn-primary" href="mailto:tomas.lebedevas@icloud.com?subject=The%20Reserve">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 011 1v12a1 1 0 01-1 1H3a1 1 0 01-1-1V6a1 1 0 011-1zm1 2.3V17h16V7.3l-8 5.4-8-5.4zM5.8 7L12 11.2 18.2 7H5.8z"/></svg>
-              <span data-i18n="book.cta">Get notified when it's out</span>
+            <a class="btn btn-sm btn-primary" href="https://www.amazon.com/dp/B0HKC567Q2" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h11a2 2 0 012 2v16a2 2 0 01-2 2H6a3 3 0 01-3-3V5a3 3 0 013-3zm0 2a1 1 0 00-1 1v11.2A3 3 0 016 16h11V4H6zm0 14a1 1 0 000 2h11v-2H6z"/></svg>
+              <span data-i18n="book.cta">Buy on Amazon.com</span>
+            </a>
+            <a class="btn btn-sm" href="https://www.amazon.de/dp/B0HKC567Q2" target="_blank" rel="noopener">
+              <span data-i18n="book.cta2">Buy on Amazon.de</span>
             </a>
           </div>
+          <p class="book-meta" data-i18n="book.meta">Paperback, 277 pages, $24.99 / €22.88 · Kindle $12.99 · ISBN 979-8174986206</p>
         </div>
       </div>
     </div>
@@ -527,7 +545,7 @@ const I18N = {
   es: {
     role: "Autor · Entrenador personal · Fotógrafo",
     place: "Vilna, Lituania",
-    lede: "Estoy escribiendo The Reserve, un libro sobre cómo el entrenamiento construye la reserva que mantiene a las personas fuertes e independientes al envejecer. Entreno a atletas híbridos y a adultos que buscan lo mismo, presencialmente en Vilna y en línea. Además: fotografía de viajes y fauna, viajes en moto en solitario y notas de mi propio entrenamiento.",
+    lede: "Escribí The Reserve, un libro sobre cómo el entrenamiento construye la reserva que mantiene a las personas fuertes e independientes al envejecer; ya está en Amazon. Entreno a atletas híbridos y a adultos que buscan lo mismo, presencialmente en Vilna y en línea. Además: fotografía de viajes y fauna, viajes en moto en solitario y notas de mi propio entrenamiento.",
     "about.h": "Sobre mí",
     "edu.h": "Formación",
     "edu.msc": "Máster en Física Ambiental y Química",
@@ -535,9 +553,11 @@ const I18N = {
     "edu.uni": "Universidad de Vilna",
     "about.lead": "Tomas Lebedevas estudió física en la Universidad de Vilna, donde obtuvo el grado en Física Computacional y después un máster en Física Ambiental y Química. Desde hace más de una década trabaja en tecnología médica, ocupándose de los sistemas de información de los que dependen hospitales y laboratorios. También es un gran aficionado al ajedrez: su rating blitz de 2030 en Chess.com lo sitúa en el 2 % superior de los jugadores del sitio.",
     "book.h": "Libro",
-    "book.status": "primer borrador",
-    "book.lead": "Fisiología del ejercicio para la longevidad, escrito para entrenadores, fisioterapeutas y clínicos. Parte de una idea: la función no se pierde de forma gradual. La capacidad disminuye poco a poco, pero la independencia se pierde a saltos, el día en que la capacidad cae por debajo de lo que exige una tarea cotidiana. El libro recorre seis reservas (capacidad aeróbica, fuerza, potencia, hueso, equilibrio y metabolismo), muestra dónde está el umbral de cada una y convierte la evidencia en entrenamiento. Los 15 capítulos están en primer borrador.",
-    "book.cta": "Avísame cuando salga",
+    "book.status": "ya disponible",
+    "book.lead": "Fisiología del ejercicio para la longevidad, escrito para entrenadores, fisioterapeutas y clínicos. Parte de una idea: la función no se pierde de forma gradual. La capacidad disminuye poco a poco, pero la independencia se pierde a saltos, el día en que la capacidad cae por debajo de lo que exige una tarea cotidiana. El libro recorre seis reservas (capacidad aeróbica, fuerza, potencia, hueso, equilibrio y metabolismo), muestra dónde está el umbral de cada una y convierte la evidencia en entrenamiento. Cada dato está referenciado y calificado: verificado, probable o sin rastrear.",
+    "book.cta": "Comprar en Amazon.com",
+    "book.cta2": "Comprar en Amazon.de",
+    "book.meta": "Tapa blanda, 277 páginas, 24,99 $ / 22,88 € · Kindle 12,99 $ · ISBN 979-8174986206",
     "photo.h": "Fotografía",
     "photo.lead": "Fotografía de viajes, naturaleza y calle, reunida a lo largo de unos quince años de viaje. Cebras e hipopótamos en Tanzania, los callejones y el desierto de Marruecos, puertos y mercados en Italia, Estados Unidos y otros lugares. Una selección de 42 fotografías, agrupadas por lugar.",
     "explore.h": "Exploring",
@@ -557,7 +577,7 @@ const I18N = {
   de: {
     role: "Autor · Personal Trainer · Fotograf",
     place: "Vilnius, Litauen",
-    lede: "Ich schreibe The Reserve, ein Buch darüber, wie Training die Reserve aufbaut, die Menschen im Alter stark und selbstständig hält. Ich trainiere Hybridsportler und Erwachsene, die genau das wollen – in Vilnius vor Ort und online. Daneben: Reise- und Wildtierfotografie, Motorradreisen allein und Notizen aus meinem eigenen Training.",
+    lede: "Ich habe The Reserve geschrieben, ein Buch darüber, wie Training die Reserve aufbaut, die Menschen im Alter stark und selbstständig hält; es ist jetzt bei Amazon erhältlich. Ich trainiere Hybridsportler und Erwachsene, die genau das wollen – in Vilnius vor Ort und online. Daneben: Reise- und Wildtierfotografie, Motorradreisen allein und Notizen aus meinem eigenen Training.",
     "about.h": "Über mich",
     "edu.h": "Ausbildung",
     "edu.msc": "M.Sc. Umwelt- und Chemiephysik",
@@ -565,9 +585,11 @@ const I18N = {
     "edu.uni": "Universität Vilnius",
     "about.lead": "Tomas Lebedevas studierte Physik an der Universität Vilnius, zunächst mit einem Bachelor in Computerphysik, danach mit einem Master in Umwelt- und Chemiephysik. Seit über zehn Jahren arbeitet er in der Medizintechnik und betreut die Informationssysteme, auf die Krankenhäuser und Labore angewiesen sind. Außerdem spielt er gern Schach: Mit einer Blitz-Wertung von 2030 auf Chess.com gehört er zu den besten 2 % der Spieler dort.",
     "book.h": "Buch",
-    "book.status": "erster Entwurf",
-    "book.lead": "Trainingsphysiologie für ein langes Leben, geschrieben für Trainer, Physiotherapeuten und Ärzte. Ausgangspunkt ist, dass Funktion nicht allmählich verloren geht: Die Leistungsfähigkeit nimmt gleichmäßig ab, die Selbstständigkeit aber in Stufen, an dem Tag, an dem sie unter die Anforderung einer alltäglichen Aufgabe fällt. Das Buch folgt sechs Reserven (aerobe Kapazität, Kraft, Schnellkraft, Knochen, Gleichgewicht und Stoffwechsel), zeigt, wo die Schwelle jeder einzelnen liegt, und übersetzt die Evidenz in Training. Alle 15 Kapitel liegen im ersten Entwurf vor.",
-    "book.cta": "Benachrichtigen, wenn es erscheint",
+    "book.status": "jetzt erhältlich",
+    "book.lead": "Trainingsphysiologie für ein langes Leben, geschrieben für Trainer, Physiotherapeuten und Ärzte. Ausgangspunkt ist, dass Funktion nicht allmählich verloren geht: Die Leistungsfähigkeit nimmt gleichmäßig ab, die Selbstständigkeit aber in Stufen, an dem Tag, an dem sie unter die Anforderung einer alltäglichen Aufgabe fällt. Das Buch folgt sechs Reserven (aerobe Kapazität, Kraft, Schnellkraft, Knochen, Gleichgewicht und Stoffwechsel), zeigt, wo die Schwelle jeder einzelnen liegt, und übersetzt die Evidenz in Training. Jede Effektgröße ist belegt und eingestuft: geprüft, wahrscheinlich oder nicht auffindbar.",
+    "book.cta": "Bei Amazon.com kaufen",
+    "book.cta2": "Bei Amazon.de kaufen",
+    "book.meta": "Taschenbuch, 277 Seiten, 24,99 $ / 22,88 € · Kindle 12,99 $ · ISBN 979-8174986206",
     "photo.h": "Fotografie",
     "photo.lead": "Reise-, Wildlife- und Straßenfotografie aus rund fünfzehn Jahren unterwegs. Zebras und Flusspferde in Tansania, Gassen und Wüste in Marokko, Häfen und Märkte in Italien, den USA und anderswo. Eine Auswahl von 42 Fotografien, nach Orten geordnet.",
     "explore.h": "Exploring",
@@ -587,7 +609,7 @@ const I18N = {
   fr: {
     role: "Auteur · Coach sportif · Photographe",
     place: "Vilnius, Lituanie",
-    lede: "J'écris The Reserve, un livre sur la manière dont l'entraînement construit la réserve qui garde les gens forts et autonomes en vieillissant. J'entraîne des athlètes hybrides et des adultes qui visent la même chose, en présentiel à Vilnius et en ligne. À côté de cela : photographie de voyage et animalière, voyages à moto en solitaire et notes de mon propre entraînement.",
+    lede: "J'ai écrit The Reserve, un livre sur la manière dont l'entraînement construit la réserve qui garde les gens forts et autonomes en vieillissant ; il est disponible sur Amazon. J'entraîne des athlètes hybrides et des adultes qui visent la même chose, en présentiel à Vilnius et en ligne. À côté de cela : photographie de voyage et animalière, voyages à moto en solitaire et notes de mon propre entraînement.",
     "about.h": "À propos",
     "edu.h": "Formation",
     "edu.msc": "Master, physique de l'environnement et chimique",
@@ -595,9 +617,11 @@ const I18N = {
     "edu.uni": "Université de Vilnius",
     "about.lead": "Tomas Lebedevas a étudié la physique à l'Université de Vilnius, avec une licence en physique computationnelle puis un master en physique de l'environnement et physique chimique. Depuis plus de dix ans, il travaille dans les technologies médicales et s'occupe des systèmes d'information dont dépendent les hôpitaux et les laboratoires. Il joue aussi volontiers aux échecs : son classement blitz de 2030 sur Chess.com le place parmi les 2 % des meilleurs joueurs du site.",
     "book.h": "Livre",
-    "book.status": "premier jet",
-    "book.lead": "Physiologie de l'exercice pour la longévité, écrit pour les coachs, les kinésithérapeutes et les cliniciens. Son point de départ : on ne perd pas ses fonctions progressivement. Les capacités déclinent de façon continue, mais l'autonomie se perd par paliers, le jour où la capacité passe sous l'exigence d'une tâche ordinaire. Le livre suit six réserves (capacité aérobie, force, puissance, os, équilibre et métabolisme), montre où se situe le seuil de chacune et traduit les données en entraînement. Les 15 chapitres existent en premier jet.",
-    "book.cta": "Être prévenu de la parution",
+    "book.status": "disponible",
+    "book.lead": "Physiologie de l'exercice pour la longévité, écrit pour les coachs, les kinésithérapeutes et les cliniciens. Son point de départ : on ne perd pas ses fonctions progressivement. Les capacités déclinent de façon continue, mais l'autonomie se perd par paliers, le jour où la capacité passe sous l'exigence d'une tâche ordinaire. Le livre suit six réserves (capacité aérobie, force, puissance, os, équilibre et métabolisme), montre où se situe le seuil de chacune et traduit les données en entraînement. Chaque taille d’effet est sourcée et classée : vérifiée, probable ou introuvable.",
+    "book.cta": "Acheter sur Amazon.com",
+    "book.cta2": "Acheter sur Amazon.de",
+    "book.meta": "Broché, 277 pages, 24,99 $ / 22,88 € · Kindle 12,99 $ · ISBN 979-8174986206",
     "photo.h": "Photographie",
     "photo.lead": "Photographie de voyage, animalière et de rue, réunie au fil d'une quinzaine d'années sur la route. Zèbres et hippopotames en Tanzanie, ruelles et désert au Maroc, ports et marchés en Italie, aux États-Unis et ailleurs. Une sélection de 42 photographies, classées par lieu.",
     "explore.h": "Exploring",
@@ -622,9 +646,9 @@ const TITLES = {
 };
 
 const DESC = {
-  es: "Tomas Lebedevas — escribe The Reserve, un libro sobre fisiología del ejercicio y longevidad. Entrenamiento personal para atletas híbridos y adultos, en Vilna y en línea.",
-  de: "Tomas Lebedevas — schreibt The Reserve, ein Buch über Trainingsphysiologie und Langlebigkeit. Personal Training für Hybridsportler und Erwachsene, in Vilnius und online.",
-  fr: "Tomas Lebedevas — écrit The Reserve, un livre sur la physiologie de l'exercice et la longévité. Coaching pour athlètes hybrides et adultes, à Vilnius et en ligne."
+  es: "Tomas Lebedevas — autor de The Reserve, un libro sobre fisiología del ejercicio y longevidad, ya disponible en Amazon. Entrenamiento personal para atletas híbridos y adultos, en Vilna y en línea.",
+  de: "Tomas Lebedevas — Autor von The Reserve, einem Buch über Trainingsphysiologie und Langlebigkeit, jetzt bei Amazon. Personal Training für Hybridsportler und Erwachsene, in Vilnius und online.",
+  fr: "Tomas Lebedevas — auteur de The Reserve, un livre sur la physiologie de l'exercice et la longévité, disponible sur Amazon. Coaching pour athlètes hybrides et adultes, à Vilnius et en ligne."
 };
 
 // English is written in the HTML itself, so search engines and visitors without
