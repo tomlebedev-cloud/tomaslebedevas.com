@@ -6,13 +6,14 @@ Asmeninis puslapis — vienas statinis HTML failas, be framework'ų, be build ž
 
 | Failas | Paskirtis |
 |---|---|
-| `index.html` | Visas puslapis: turinys, CSS ir 4 kalbų vertimai viename faile |
+| `index.html` | Visas puslapis: turinys, CSS ir 5 kalbų vertimai viename faile |
 | `404.html` | Klaidos puslapis neegzistuojančiam adresui (GitHub Pages jį naudoja automatiškai; keliai absoliutūs, `noindex`) |
 | `img/tomas-lebedevas.jpg` | Portretas, originalas (745×951, 122 KB) — šaltinis, puslapyje nenaudojamas |
 | `img/tomas-lebedevas-portrait-480.jpg` | Portretas 4:5 (480×600) pirmam ekranui |
 | `img/tomas-lebedevas-portrait-745.jpg` | Tas pats originalas, perkoduotas JPEG q84 (73 KB) — 2x versija `srcset` |
 | `img/tomas-lebedevas-800.jpg` | Kvadratinis portretas (atsarginis) |
-| `img/og-image.jpg` | Nuorodos peržiūra dalinantis (`og:image`, 1200×630) — portretas, vardas, domenas |
+| `img/og-image.png` | Nuorodos peržiūra dalinantis (`og:image`, 1200×630) — Editorial stilius: vardas, projektai, spalvotas portretas. Sugeneruota iš HTML per Chrome headless (2026-10-01) |
+| `img/og-image.jpg` | Senoji (mėlyna) peržiūra, nebenaudojama |
 | `audio/tomas-lebedevas-intro.mp3` | Įgarsintas prisistatymas (Epidemic Sound, balsas Edward, 1:10, 128 kbps mono, 1,1 MB). Mygtukas „Listen" rodomas tik EN versijoje |
 | `robots.txt` | Leidžia indeksuoti, nurodo sitemap |
 | `sitemap.xml` | Vienas įrašas — pagrindinis puslapis |
@@ -20,33 +21,38 @@ Asmeninis puslapis — vienas statinis HTML failas, be framework'ų, be build ž
 ## Turinys ir dizainas
 
 Skiltys: pirmas ekranas su portretu, „Apie" (viena pastraipa), knyga *The Reserve*,
-keturios kortelės 2×2 (fotografija, Exploring, Training Lab, asmeninis treneris) ir
-kontaktai mėlynoje juostoje. Šachmatai paminėti „Apie" pastraipoje, atskiros kortelės nėra.
+šešios kortelės 2×3 (fotografija, Exploring, Training Lab, asmeninis treneris,
+TrainScience, Tedey Thomson) ir kontaktai juodoje juostoje. Šachmatai paminėti „Apie" pastraipoje, atskiros kortelės nėra.
 „Apie" parašyta trečiuoju asmeniu. Reitingas 2030 yra **chess.com blitz** (FIDE profilis
 12813370 rodo tik neaktyvų blitz 1823), todėl tekste platforma įvardyta. „Top 2 %" yra
 atsargus skaičius: viešai cituojama, kad chess.com blitz 2000 ≈ top 1 %, bet pirminio
 chess.com šaltinio nerasta. Tikslų procentilį rodo chess.com profilio statistika.
 IT darbų sąrašas ir sertifikatai 2026-09-11 išimti — juos aprašo CV ir LinkedIn.
 
-Spalvos paimtos iš portreto: balta, žydra (`--sky-*`) ir tamsiai mėlyna (`--navy`).
-Nuo 2026-09-12 pridėti smėlio tonai (`--sand-*`, `#F2EBDD` / `#E3D8C3` — tie patys kaip
-fotografijos puslapyje): pirmo ekrano apačia, figūra už portreto, knygos skiltis ir poraštė.
-Tamsios temos nėra sąmoningai. Šriftai: Inter ir Source Serif 4 (knygos pavadinimui).
+Nuo 2026-10-01 dizainas **Editorial, juodai baltas**: balta, juoda ir pilkos, plonos juodos
+linijos vietoj kortelių rėmelių, kvadratiniai mygtukai, serifinės antraštės ir pagrindiniai
+tekstai (Source Serif 4), pagalbinis tekstas Inter. Vienintelis spalvos akcentas — kobalto
+mėlyna `--accent: #1F4FD8` (ta pati kaip ant knygos viršelio): skyrių numeriai, nuorodos,
+eyebrow, aktyvus meniu punktas; juodame fone šviesesnė `--accent-light: #7C98F2`.
+Spalvoti lieka tik portretas (su juodu poslinkio bloku) ir knygos viršelis.
+Senieji kintamųjų vardai (`--sky-*`, `--sand-*`, `--blue-*`, `--navy`) palikti, bet jų
+reikšmės dabar pilkos/juodos. Skyrių numeriai (01–09) generuojami CSS skaitikliu, todėl
+pridėjus kortelę persinumeruoja patys. Tamsios temos nėra sąmoningai.
+Senasis mėlynas dizainas — git istorijoje iki commit'o `dca3f6a`.
 
 ## Kalbos
 
-EN · ES · DE · FR. LT kol kas išimta (2026-09-15, Tomo prašymu); vertimą galima atgauti iš
-git istorijos (commit'as prieš LT išėmimą). Kalba parenkama iš `localStorage`, jei nėra — iš naršyklės
+EN · ES · DE · FR · LT (LT grąžinta 2026-10-01; naudojamas terminas „asmeninis treneris"). Kalba parenkama iš `localStorage`, jei nėra — iš naršyklės
 kalbos, jei ir tos nėra — EN.
 
 **EN tekstas yra pačiame HTML'e**, kad paieškos robotai ir lankytojai be JavaScript
 matytų turinį. JS jį perskaito įsikrovus (`I18N.en` sukuriamas iš `[data-i18n]`
 elementų, `DESC.en` — iš `meta-desc`, `TITLES.en` — iš `<title>`), todėl EN laikomas
-tik vienoje vietoje. ES/DE/FR vertimai yra `I18N` objekte `index.html` apačioje.
+tik vienoje vietoje. ES/DE/FR/LT vertimai yra `I18N` objekte `index.html` apačioje.
 
 Kartu su kalba keičiasi ir `<title>` (`TITLES` objektas) bei `meta description`
 (`DESC` objektas) — tai, ką žmonės mato paieškos rezultatuose. Abu blokai faile eina
-vienas po kito ir abu turi `es`/`de`/`fr` raktus, tad juos redaguojant verta įsitikinti,
+vienas po kito ir abu turi `es`/`de`/`fr`/`lt` raktus, tad juos redaguojant verta įsitikinti,
 kad taisomas tas blokas, kurio reikia.
 
 Teksto keitimas: susirandi raktą (pvz. `book.lead`). EN taisai HTML'e — **visuose**
