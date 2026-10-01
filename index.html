@@ -32,7 +32,7 @@
   "email": "tomas.lebedevas@icloud.com",
   "address": { "@type": "PostalAddress", "addressLocality": "Vilnius", "addressCountry": "LT" },
   "alumniOf": { "@type": "CollegeOrUniversity", "name": "Vilnius University" },
-  "knowsAbout": ["Exercise physiology", "Longevity", "Personal training", "Medical technology", "Photography", "Chess"],
+  "knowsAbout": ["Exercise physiology", "Longevity", "Personal training", "Medical technology", "Photography", "Trance music", "Chess"],
   "sameAs": [
     "https://www.linkedin.com/in/tomas-lebedevas",
     "https://tomaslebedevas.photography/",
@@ -41,6 +41,8 @@
     "https://www.instagram.com/tom.lebedev_sports/",
     "https://www.instagram.com/tom.lebedev_exploring/",
     "https://peaksandmiles.com/",
+    "https://trainscience.com/",
+    "https://tedeythomson.com/",
     "https://www.facebook.com/lebedevas"
   ]
 }
@@ -342,7 +344,7 @@ footer{background:var(--sand-50);border-top:1px solid var(--sand-rule)}
       <a href="#book" data-i18n="book.h">Book</a>
       <a href="#photography" data-i18n="photo.h">Photography</a>
       <a href="#exploring" data-i18n="explore.h">Exploring</a>
-      <a href="#sport" data-i18n="sport.h">Training Lab</a>
+      <a href="#trainscience">TrainScience</a>
       <a href="#contact" data-i18n="contact.h">Contact</a>
     </nav>
     <div class="langs" role="group" aria-label="Language">
@@ -509,6 +511,33 @@ footer{background:var(--sand-50);border-top:1px solid var(--sand-rule)}
         </div>
       </article>
 
+      <article class="card" id="trainscience">
+        <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 2h6v2h-1v5.3l5.6 9.4A2 2 0 0117.9 22H6.1a2 2 0 01-1.7-3.3L10 9.3V4H9V2zm3 8.5L8.6 16h6.8L12 10.5z"/></svg></div>
+        <h2>TrainScience</h2>
+        <p data-i18n="ts.lead">A research-led training lab for longevity, strength and endurance. We read the new studies, turn them into protocols with clear intensity, volume and progression, coach people through them one-to-one or in small groups, and test before, during and after. A research digest tracks the latest papers and trials, refreshed every three weeks.</p>
+        <div class="links">
+          <a class="btn btn-sm btn-primary" href="https://trainscience.com/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.4l-8.3 8.3-1.4-1.4L17.6 5H14V3zM5 5h6v2H5v12h12v-6h2v6a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2z"/></svg>
+            <span>trainscience.com</span>
+          </a>
+          <a class="btn btn-sm" href="https://trainscience.com/research/" target="_blank" rel="noopener">
+            <span data-i18n="ts.cta">Latest papers</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="card" id="music">
+        <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 3v12.5a3.5 3.5 0 11-2-3.16V7.3l-8 1.6v8.6A3.5 3.5 0 118 14.34V5l12-2z"/></svg></div>
+        <h2>Tedey Thomson</h2>
+        <p data-i18n="music.lead">My trance alias: melodic, euphoric and inspiring, in the 132–140 BPM range. The name comes from a pink teddy bear I got as a child instead of a birthday present, which became my talisman for years. The story is on the site, and the first tracks are on the way.</p>
+        <div class="links">
+          <a class="btn btn-sm btn-primary" href="https://tedeythomson.com/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.4l-8.3 8.3-1.4-1.4L17.6 5H14V3zM5 5h6v2H5v12h12v-6h2v6a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2z"/></svg>
+            <span>tedeythomson.com</span>
+          </a>
+        </div>
+      </article>
+
     </div>
   </section>
 
@@ -577,6 +606,9 @@ const I18N = {
     "trainer.cta": "Consultar sobre entrenamiento",
     "trainer.inperson": "Presencial en Vilna",
     "trainer.online": "En línea",
+    "ts.lead": "Un laboratorio de entrenamiento basado en la investigación, para longevidad, fuerza y resistencia. Leemos los estudios nuevos, los convertimos en protocolos con intensidad, volumen y progresión claros, acompañamos a las personas de forma individual o en grupos pequeños, y medimos antes, durante y después. Un resumen de investigación recoge los artículos y ensayos más recientes y se actualiza cada tres semanas.",
+    "ts.cta": "Últimos artículos",
+    "music.lead": "Mi alias de trance: melódico, eufórico e inspirador, entre 132 y 140 BPM. El nombre viene de un osito de peluche rosa que recibí de niño en lugar de un regalo de cumpleaños y que fue mi talismán durante años. La historia está en la web, y los primeros temas están en camino.",
     "contact.h": "Contacto",
     "foot.built": "Vilna, Lituania"
   },
@@ -610,6 +642,9 @@ const I18N = {
     "trainer.cta": "Training anfragen",
     "trainer.inperson": "Vor Ort in Vilnius",
     "trainer.online": "Online",
+    "ts.lead": "Ein forschungsbasiertes Trainingslabor für Langlebigkeit, Kraft und Ausdauer. Wir lesen neue Studien, machen daraus Protokolle mit klarer Intensität, klarem Umfang und klarer Progression, betreuen Menschen einzeln oder in kleinen Gruppen und testen vorher, währenddessen und danach. Ein Research-Digest sammelt die neuesten Studien und Trials und wird alle drei Wochen aktualisiert.",
+    "ts.cta": "Neueste Studien",
+    "music.lead": "Mein Trance-Alias: melodisch, euphorisch und inspirierend, zwischen 132 und 140 BPM. Der Name stammt von einem rosa Teddybären, den ich als Kind statt eines Geburtstagsgeschenks bekam und der jahrelang mein Talisman war. Die Geschichte steht auf der Website, die ersten Tracks sind unterwegs.",
     "contact.h": "Kontakt",
     "foot.built": "Vilnius, Litauen"
   },
@@ -643,6 +678,9 @@ const I18N = {
     "trainer.cta": "Me contacter pour un entraînement",
     "trainer.inperson": "En personne à Vilnius",
     "trainer.online": "En ligne",
+    "ts.lead": "Un laboratoire d'entraînement fondé sur la recherche, pour la longévité, la force et l'endurance. Nous lisons les nouvelles études, les traduisons en protocoles avec une intensité, un volume et une progression clairs, accompagnons chacun en individuel ou en petit groupe, et mesurons avant, pendant et après. Une veille scientifique rassemble les derniers articles et essais, mise à jour toutes les trois semaines.",
+    "ts.cta": "Derniers articles",
+    "music.lead": "Mon alias trance : mélodique, euphorique et inspirant, entre 132 et 140 BPM. Le nom vient d'un ours en peluche rose reçu enfant à la place d'un cadeau d'anniversaire, devenu mon talisman pendant des années. L'histoire est sur le site, et les premiers morceaux arrivent.",
     "contact.h": "Contact",
     "foot.built": "Vilnius, Lituanie"
   }
