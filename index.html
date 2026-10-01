@@ -121,6 +121,9 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
 }
 .nav{display:flex;gap:2px;margin-left:auto}
 .nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:500;padding:8px 11px;border-radius:8px;transition:color .15s,background .15s}
+.skip{position:absolute;left:12px;top:-60px;z-index:50;background:#000;color:#fff;padding:10px 16px;font-weight:600;font-size:14px;text-decoration:none}
+.skip:focus{top:12px}
+.nav a[aria-current="true"]{color:#000;box-shadow:inset 0 -2px 0 var(--accent);border-radius:0}
 .nav a:hover{color:var(--accent);background:none;text-decoration:underline;text-underline-offset:6px}
 .langs{display:flex;gap:2px;padding:3px;background:var(--sky-50);border:1px solid var(--rule);border-radius:10px}
 .langs button{
@@ -349,6 +352,7 @@ footer{background:var(--white);border-top:1px solid #000}
 </style>
 </head>
 <body>
+<a class="skip" href="#top" data-i18n="skip">Skip to content</a>
 
 <header class="topbar">
   <div class="wrap">
@@ -593,6 +597,7 @@ footer{background:var(--white);border-top:1px solid #000}
 <script>
 const I18N = {
   es: {
+    skip: "Saltar al contenido",
     role: "Autor · Entrenador personal · Fotógrafo",
     place: "Vilna, Lituania",
     lede: "Escribí The Reserve, un libro sobre cómo el entrenamiento construye la reserva que mantiene a las personas fuertes e independientes al envejecer; ya está en Amazon. Entreno a atletas híbridos y a adultos que buscan lo mismo, presencialmente en Vilna y en línea. Además: fotografía de viajes y fauna, viajes en moto en solitario y notas de mi propio entrenamiento. También dirijo TrainScience, un laboratorio de entrenamiento basado en la investigación, y hago música trance como Tedey Thomson.",
@@ -629,6 +634,7 @@ const I18N = {
   },
 
   de: {
+    skip: "Zum Inhalt springen",
     role: "Autor · Personal Trainer · Fotograf",
     place: "Vilnius, Litauen",
     lede: "Ich habe The Reserve geschrieben, ein Buch darüber, wie Training die Reserve aufbaut, die Menschen im Alter stark und selbstständig hält; es ist jetzt bei Amazon erhältlich. Ich trainiere Hybridsportler und Erwachsene, die genau das wollen – in Vilnius vor Ort und online. Daneben: Reise- und Wildtierfotografie, Motorradreisen allein und Notizen aus meinem eigenen Training. Außerdem betreibe ich TrainScience, ein forschungsbasiertes Trainingslabor, und mache Trance-Musik als Tedey Thomson.",
@@ -665,6 +671,7 @@ const I18N = {
   },
 
   fr: {
+    skip: "Aller au contenu",
     role: "Auteur · Coach sportif · Photographe",
     place: "Vilnius, Lituanie",
     lede: "J'ai écrit The Reserve, un livre sur la manière dont l'entraînement construit la réserve qui garde les gens forts et autonomes en vieillissant ; il est disponible sur Amazon. J'entraîne des athlètes hybrides et des adultes qui visent la même chose, en présentiel à Vilnius et en ligne. À côté de cela : photographie de voyage et animalière, voyages à moto en solitaire et notes de mon propre entraînement. Je dirige aussi TrainScience, un laboratoire d'entraînement fondé sur la recherche, et je fais de la musique trance sous le nom de Tedey Thomson.",
@@ -700,6 +707,7 @@ const I18N = {
     "foot.built": "Vilnius, Lituanie"
   },
   lt: {
+    skip: "Pereiti prie turinio",
     role: "Autorius · Asmeninis treneris · Fotografas",
     place: "Vilnius, Lietuva",
     lede: "Parašiau knygą „The Reserve“ apie tai, kaip treniruotės kuria atsargą, padedančią išlikti stipriems ir savarankiškiems senstant; ji jau parduodama „Amazon“. Treniruoju hibridinius sportininkus ir suaugusiuosius, norinčius to paties, gyvai Vilniuje ir nuotoliu. Be to: kelionių ir laukinės gamtos fotografija, pavienės kelionės motociklu ir užrašai iš savo treniruočių. Taip pat vadovauju „TrainScience“, moksliniais tyrimais grįstai treniruočių laboratorijai, ir kuriu trance muziką kaip Tedey Thomson.",
@@ -819,6 +827,23 @@ document.querySelectorAll(".langs button").forEach(function(b){
   b.addEventListener("click", function(){ setLang(b.dataset.lang); });
 });
 setLang(initialLang());
+
+// Mark the section in view in the top navigation.
+(function(){
+  if (!("IntersectionObserver" in window)) return;
+  const links = {};
+  document.querySelectorAll(".nav a[href^='#']").forEach(function(a){ links[a.getAttribute("href").slice(1)] = a; });
+  const io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      const a = links[e.target.id];
+      if (a && e.isIntersecting) {
+        Object.keys(links).forEach(function(k){ links[k].removeAttribute("aria-current"); });
+        a.setAttribute("aria-current", "true");
+      }
+    });
+  }, { rootMargin: "-35% 0px -55% 0px" });
+  Object.keys(links).forEach(function(id){ const el = document.getElementById(id); if (el) io.observe(el); });
+})();
 </script>
 
 </body>

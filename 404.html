@@ -11,50 +11,26 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
 <style>
-:root{
-  --white:#FFFFFF;
-  --sky-50:#F4F9FD;
-  --blue-600:#226DAE;
-  --blue-700:#1D5F99;
-  --navy:#0F2A44;
-  --ink:#24313D;
-  --muted:#5A6B7B;
-  --rule:#DDE8F1;
-  --sand-50:#FBF7EF;
-  --sans:"Inter","Segoe UI",system-ui,-apple-system,Arial,sans-serif;
-}
+:root{--accent:#1F4FD8;--ink:#1A1A1A;--muted:#666;--sans:"Inter","Helvetica Neue","Segoe UI",system-ui,-apple-system,Arial,sans-serif;--serif:"Source Serif 4",Georgia,"Times New Roman",serif}
 *{box-sizing:border-box}
 html,body{height:100%}
-body{
-  margin:0;display:flex;flex-direction:column;
-  background:linear-gradient(180deg,var(--white) 0%,var(--sky-50) 55%,var(--sand-50) 100%);
-  color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;
-  -webkit-font-smoothing:antialiased;
-}
-a:focus-visible{outline:3px solid var(--blue-600);outline-offset:2px;border-radius:8px}
-header{border-bottom:1px solid var(--rule);background:rgba(255,255,255,.92)}
+body{margin:0;display:flex;flex-direction:column;background:#fff;color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+header{border-bottom:1px solid #000;background:#fff}
 .bar{max-width:1100px;margin:0 auto;padding:0 32px;height:64px;display:flex;align-items:center}
-.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--navy);font-weight:600;font-size:15.5px}
-.mono{
-  width:34px;height:34px;border-radius:9px;display:grid;place-items:center;
-  background:linear-gradient(145deg,#2F80C4,var(--blue-700));
-  color:#fff;font-size:12.5px;font-weight:700;letter-spacing:.05em;
-}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:#000;font-weight:600;font-size:15.5px}
+.mono{width:34px;height:34px;border-radius:6px;display:grid;place-items:center;background:#000;color:#fff;font-size:12.5px;font-weight:700;letter-spacing:.05em}
 main{flex:1;display:grid;place-items:center;padding:64px 20px}
-.box{max-width:520px;text-align:center}
-.code{margin:0 0 6px;font-size:13px;font-weight:600;letter-spacing:.18em;color:var(--blue-600)}
-h1{margin:0 0 14px;font-size:clamp(30px,6vw,40px);line-height:1.1;letter-spacing:-.02em;color:var(--navy)}
+.box{max-width:520px}
+.code{margin:0 0 18px;padding-top:14px;border-top:1px solid #000;font-size:12px;font-weight:600;letter-spacing:.16em;color:var(--accent)}
+h1{margin:0 0 16px;font-family:var(--serif);font-size:clamp(36px,7vw,60px);line-height:1.02;letter-spacing:-.025em;font-weight:600;color:#000}
 p{margin:0 0 28px;color:var(--muted)}
-.btn{
-  display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:10px 20px;
-  border-radius:10px;background:var(--blue-600);color:#fff;
-  font-weight:600;font-size:15px;text-decoration:none;
-}
-.btn:hover{background:var(--blue-700)}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:10px 20px;border:1px solid #000;background:#000;color:#fff;font-weight:600;font-size:15px;text-decoration:none}
+.btn:hover{background:#fff;color:#000}
 .btn svg{width:16px;height:16px;fill:currentColor}
-@media (max-width:660px){ .bar{padding:0 20px} }
+@media (max-width:660px){.bar{padding:0 20px}}
 </style>
 </head>
 <body>
