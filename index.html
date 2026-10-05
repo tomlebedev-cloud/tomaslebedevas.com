@@ -348,6 +348,45 @@ footer{background:var(--white);border-top:1px solid #000}
   .langs button{position:relative;min-width:44px;min-height:38px;padding:7px 6px}
   .langs button::after{content:"";position:absolute;inset:-3px 0}
 }
+@media print{
+  @page{margin:14mm 16mm}
+  body{font-size:11pt;line-height:1.5;color:#000}
+  .topbar,.skip,.langs,.listen,.portrait-tag,.hero::before,.contact::before,.btn svg,.icon{display:none!important}
+  .wrap{padding:0}
+  .hero .wrap{grid-template-columns:minmax(0,1fr) 130px;gap:28px;align-items:start;padding:0 0 12px}
+  .portrait-wrap{order:0;width:130px;justify-self:end}
+  .eyebrow{font-size:8pt;margin-bottom:10px}
+  .place{margin-bottom:12px}
+  .lede{margin-bottom:12px}
+  .hero .actions{display:none}
+  .contact .actions{gap:6px 18px}
+  .portrait-wrap::before{display:none}
+  h1{font-size:34pt}
+  .lede,.about-text{font-size:11.5pt}
+  .section,.contact{padding:18px 0}
+  .split{grid-template-columns:1fr;gap:0}
+  .book{grid-template-columns:90px 1fr;gap:20px;padding:8px 0 16px}
+  .book h3{font-size:20pt}
+  .cards{grid-template-columns:1fr 1fr;gap:16px 28px}
+  .card{padding:12px 0 0;break-inside:avoid}
+  .card h2{font-size:14pt}
+  h2{font-size:18pt;margin-bottom:10px;break-inside:avoid;break-after:avoid}
+  .book p{font-size:11pt}
+  .book p.book-meta{font-size:9pt}
+  .cover-link{box-shadow:none}
+  .card p{font-size:10pt}
+  .contact .wrap,.edu li{break-inside:avoid}
+  .about-text{max-width:none}
+  h2::before{margin-bottom:8px;padding-top:8px}
+  .btn{border:0;padding:0;font-weight:500;color:#000;background:none!important}
+  .btn-primary{color:#000}
+  .contact{background:#fff;color:#000}
+  .contact h2,.mail,.contact .actions .btn{color:#000}
+  .contact h2::before{border-top-color:#000;color:var(--accent)}
+  .mail{font-size:18pt;border-bottom:0}
+  footer{border-top:0}
+  a{text-decoration:none}
+}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *{transition:none!important}
@@ -432,7 +471,7 @@ footer{background:var(--white);border-top:1px solid #000}
         <ul class="edu">
           <li><span class="edu-y">2013</span><div><b data-i18n="edu.msc">MSc, Environmental and Chemical Physics</b><span data-i18n="edu.uni">Vilnius University</span></div></li>
           <li><span class="edu-y">2011</span><div><b data-i18n="edu.bsc">BSc, Computational Physics</b><span data-i18n="edu.uni">Vilnius University</span></div></li>
-          <li><span class="edu-y">edX</span><div><b>Introduction to Solid-State Chemistry</b><span>MITx 3.091</span></div></li>
+          <li><span class="edu-y">edX</span><div><b>Introduction to Solid-State Chemistry</b><span data-i18n="edu.mitx">MITx 3.091 · online course</span></div></li>
         </ul>
       </div>
     </div>
@@ -600,6 +639,7 @@ footer{background:var(--white);border-top:1px solid #000}
 <script>
 const I18N = {
   es: {
+    "edu.mitx": "MITx 3.091 · curso en línea",
     skip: "Saltar al contenido",
     role: "Autor · Entrenador personal · Fotógrafo",
     place: "Vilna, Lituania",
@@ -637,6 +677,7 @@ const I18N = {
   },
 
   de: {
+    "edu.mitx": "MITx 3.091 · Onlinekurs",
     skip: "Zum Inhalt springen",
     role: "Autor · Personal Trainer · Fotograf",
     place: "Vilnius, Litauen",
@@ -674,6 +715,7 @@ const I18N = {
   },
 
   fr: {
+    "edu.mitx": "MITx 3.091 · cours en ligne",
     skip: "Aller au contenu",
     role: "Auteur · Coach sportif · Photographe",
     place: "Vilnius, Lituanie",
@@ -710,6 +752,7 @@ const I18N = {
     "foot.built": "Vilnius, Lituanie"
   },
   lt: {
+    "edu.mitx": "MITx 3.091 · nuotolinis kursas",
     skip: "Pereiti prie turinio",
     role: "Autorius · Asmeninis treneris · Fotografas",
     place: "Vilnius, Lietuva",
